@@ -337,7 +337,18 @@ function MiniCard({
 function BrandSlide() {
   return (
     <SlideShell glow="right" texture>
-      <div className="grid items-center gap-5 sm:gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
+      <div className="grid items-center gap-4 sm:gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
+        <Reveal
+          index={3}
+          className="relative mx-auto aspect-square w-full max-w-[140px] overflow-hidden rounded-2xl sm:hidden"
+        >
+          <div className="absolute inset-0 rounded-2xl bg-honey/10 blur-2xl" />
+          <ProductImage
+            src="/images/product-banner.png"
+            alt="GirthRx Honey product family — box and sachets"
+            className="relative object-cover"
+          />
+        </Reveal>
         <div>
           <Reveal index={0}>
             <Eyebrow>The Ultimate Power Source</Eyebrow>
@@ -510,7 +521,16 @@ function ProductSlide() {
         </SlideTitle>
       </Reveal>
 
-      <div className="mt-4 grid items-center gap-4 sm:mt-6 lg:grid-cols-[1fr_0.85fr] lg:gap-8">
+      <Reveal index={3} className="relative mx-auto h-36 w-full max-w-[140px] sm:hidden">
+        <div className="absolute inset-[20%] rounded-full bg-honey/20 blur-3xl" />
+        <ProductImage
+          src="/images/hero-product.png"
+          alt="GirthRx GRX 01 20g functional honey sachet and box"
+          className="relative drop-shadow-2xl"
+        />
+      </Reveal>
+
+      <div className="mt-3 grid items-center gap-4 sm:mt-6 lg:grid-cols-[1fr_0.85fr] lg:gap-8">
         <div className="grid grid-cols-2 gap-2 sm:gap-3">
           {ingredients.map((ing, i) => (
             <Reveal
@@ -558,7 +578,15 @@ function UsageSlide() {
   ]
   return (
     <SlideShell glow="left">
-      <div className="grid items-center gap-5 sm:gap-8 lg:grid-cols-2 lg:gap-12">
+      <Reveal index={2} className="relative mx-auto flex items-center justify-center sm:hidden">
+        <div className="absolute inset-[15%] rounded-full bg-honey/20 blur-3xl" />
+        <ProductImage
+          src="/images/single.jpeg"
+          alt="GirthRx 20g honey sachet — single serving"
+          className="relative h-32 w-auto drop-shadow-2xl"
+        />
+      </Reveal>
+      <div className="grid items-center gap-4 sm:gap-8 lg:grid-cols-2 lg:gap-12">
         <div>
           <Reveal index={0}>
             <Eyebrow>Usage & Experience</Eyebrow>
