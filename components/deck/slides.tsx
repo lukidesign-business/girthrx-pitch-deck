@@ -434,7 +434,7 @@ function ProblemSlide() {
 function SolutionSlide() {
   const steps = [
     { icon: IconCut, label: 'Tear', copy: 'Open a discreet, mess-free sachet anywhere.' },
-    { icon: IconBeam, label: 'Take', copy: 'One sachet every two days; new users start with half.' },
+    { icon: IconDrop, label: 'Take', copy: 'One sachet every two days; new users start with half.' },
     { icon: IconDrop, label: 'Thrive', copy: 'Feel natural energy, stamina, and quiet confidence build.' },
     { icon: IconCycle, label: 'Repeat', copy: 'Consistency compounds into a ritual.' },
   ]
@@ -604,17 +604,17 @@ function MarketSlide() {
   const items = [
     {
       icon: IconTrend,
-      title: "Men's Health & Performance",
-      copy: 'A large, growing category as men invest in energy, stamina, and wellness.',
+      title: "Men's Health",
+      copy: 'A rapidly growing category as men invest in energy, stamina, and wellness.',
     },
     {
       icon: IconLeaf,
-      title: 'Rising Natural Demand',
-      copy: 'A clear shift away from synthetic boosters toward botanical alternatives.',
+      title: 'Natural',
+      copy: 'Men are shifting away from synthetic boosters toward botanical alternatives.',
     },
     {
       icon: IconTarget,
-      title: 'A New White Space',
+      title: 'White Space',
       copy: 'GirthRx sits between supplements and lifestyle as a premium honey ritual.',
     },
   ]
@@ -628,9 +628,17 @@ function MarketSlide() {
       </Reveal>
       <div className="mt-4 grid grid-cols-3 gap-2 sm:mt-6 sm:gap-3 lg:gap-4">
         {items.map((it, i) => (
-          <MiniCard key={it.title} icon={it.icon} title={it.title} index={i + 2}>
-            {it.copy}
-          </MiniCard>
+          <Reveal
+            key={it.title}
+            index={i + 2}
+            className={cn(cardBase, cardGlint, 'p-3 sm:p-4 lg:p-5')}
+          >
+            <IconBox icon={it.icon} className="mb-2 sm:mb-3" />
+            <h3 className="mb-1 font-heading text-xs font-semibold uppercase tracking-wide text-foreground sm:text-sm lg:text-base">
+              {it.title}
+            </h3>
+            <p className="text-[10px] leading-snug text-muted-foreground sm:text-xs sm:leading-relaxed">{it.copy}</p>
+          </Reveal>
         ))}
       </div>
       <Reveal index={5}>
@@ -771,7 +779,7 @@ function PricingSlide() {
 function GoToMarketSlide() {
   const funnel = [
     { icon: IconSpeaker, label: 'Awareness', copy: 'Social & creator content, TikTok Shop discovery.' },
-    { icon: IconBeam, label: 'Trial', copy: 'Single-sachet purchase, low-friction entry.' },
+    { icon: IconCoin, label: 'Trial', copy: 'Single-sachet purchase, low-friction entry.' },
     { icon: IconCycle, label: 'Ritual Adoption', copy: '10-packs & bundles become the daily habit.' },
     { icon: IconUsers, label: 'Repeat / Sub', copy: 'Subscription, wholesale, and gym/retail accounts.' },
   ]
