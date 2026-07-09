@@ -234,11 +234,11 @@ function IconEyeOff({ className }: { className?: string }) {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Shared card styles (next-gen)                                              */
+/*  Shared card styles                                                         */
 /* -------------------------------------------------------------------------- */
 
 const cardBase =
-  'relative rounded-2xl border border-white/8 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-5 backdrop-blur-md transition-all duration-300 hover:border-honey/35 hover:from-honey/[0.07] hover:to-honey/[0.02]'
+  'relative rounded-xl border border-white/8 bg-gradient-to-br from-white/[0.06] to-white/[0.02] backdrop-blur-md transition-all duration-300 hover:border-honey/35 hover:from-honey/[0.07] hover:to-honey/[0.02]'
 
 const cardGlint =
   'before:pointer-events-none before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-white/25 before:to-transparent'
@@ -276,11 +276,11 @@ function IconBox({
   return (
     <div
       className={cn(
-        'inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-honey/20 to-honey/5 text-honey ring-1 ring-honey/25',
+        'inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-honey/20 to-honey/5 text-honey ring-1 ring-honey/25 sm:h-10 sm:w-10',
         className,
       )}
     >
-      <Icon className="h-5 w-5" />
+      <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
     </div>
   )
 }
@@ -320,48 +320,48 @@ function MiniCard({
   index?: number
 }) {
   return (
-    <Reveal index={index} className={cn(cardBase, cardGlint, 'p-5 sm:p-6')}>
-      <IconBox icon={Icon} className="mb-3 sm:mb-4" />
-      <h3 className="mb-2 font-heading text-base font-semibold uppercase tracking-wide text-foreground sm:text-lg">
+    <Reveal index={index} className={cn(cardBase, cardGlint, 'p-3 sm:p-4 lg:p-5')}>
+      <IconBox icon={Icon} className="mb-2 sm:mb-3" />
+      <h3 className="mb-1 font-heading text-sm font-semibold uppercase tracking-wide text-foreground sm:text-base">
         {title}
       </h3>
-      <p className="text-xs leading-relaxed text-muted-foreground sm:text-sm">{children}</p>
+      <p className="text-xs leading-relaxed text-muted-foreground">{children}</p>
     </Reveal>
   )
 }
 
 /* -------------------------------------------------------------------------- */
-/*  01 (was 11) — Brand Story — now the FIRST slide                           */
+/*  01 — Brand Story (first slide)                                            */
 /* -------------------------------------------------------------------------- */
 
 function BrandSlide() {
   return (
     <SlideShell glow="right" texture>
-      <div className="grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
+      <div className="grid items-center gap-5 sm:gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
         <div>
           <Reveal index={0}>
             <Eyebrow>The Ultimate Power Source</Eyebrow>
           </Reveal>
           <Reveal index={1}>
-            <SlideTitle className="mt-4 sm:mt-6">
+            <SlideTitle className="mt-3 sm:mt-4">
               Premium Honey, Refined into a{' '}
               <span className="honey-text">Daily Ritual.</span>
             </SlideTitle>
           </Reveal>
           <Reveal index={2}>
-            <p className="mt-4 font-heading text-lg font-medium uppercase tracking-wide text-honey sm:mt-6 sm:text-2xl">
+            <p className="mt-2 font-heading text-sm font-medium uppercase tracking-wide text-honey sm:mt-3 sm:text-base lg:text-xl">
               For men who finish strong.
             </p>
           </Reveal>
           <Reveal index={3}>
-            <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted-foreground sm:mt-6 sm:text-base">
+            <p className="mt-2 max-w-lg text-xs leading-relaxed text-muted-foreground sm:mt-3 sm:text-sm lg:text-base">
               GirthRx is quietly confident, engineered for modern men who want real
               performance without awkward conversations or clinical packaging. Every
               sachet is designed to feel like a small luxury, not a supplement chore.
             </p>
           </Reveal>
           <Reveal index={4}>
-            <p className="mt-6 text-xs font-medium uppercase tracking-[0.2em] text-foreground/50 sm:mt-8 sm:text-sm">
+            <p className="mt-3 text-[10px] font-medium uppercase tracking-[0.2em] text-foreground/50 sm:mt-4 sm:text-xs">
               Investor &amp; Partner Overview
               <span className="mx-2 text-honey">·</span>
               girthrx.com
@@ -370,9 +370,9 @@ function BrandSlide() {
         </div>
         <Reveal
           index={3}
-          className="relative mx-auto aspect-square w-full max-w-xs overflow-hidden rounded-3xl sm:max-w-sm lg:max-w-none"
+          className="relative mx-auto hidden aspect-square w-full max-w-xs overflow-hidden rounded-2xl sm:block lg:max-w-none"
         >
-          <div className="absolute inset-0 rounded-3xl bg-honey/10 blur-2xl" />
+          <div className="absolute inset-0 rounded-2xl bg-honey/10 blur-2xl" />
           <ProductImage
             src="/images/product-banner.png"
             alt="GirthRx Honey product family — box and sachets"
@@ -391,25 +391,25 @@ function BrandSlide() {
 function ProblemSlide() {
   return (
     <SlideShell glow="left">
-      <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-12">
+      <div className="grid gap-5 sm:gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-12">
         <div>
           <Reveal index={0}>
             <Eyebrow>The Problem</Eyebrow>
           </Reveal>
           <Reveal index={1}>
-            <SlideTitle className="mt-4 sm:mt-6">
+            <SlideTitle className="mt-3 sm:mt-4">
               Modern men are tired of cringe, clinical{' '}
               <span className="honey-text">&ldquo;solutions.&rdquo;</span>
             </SlideTitle>
           </Reveal>
           <Reveal index={2}>
-            <p className="mt-5 max-w-sm text-pretty text-sm leading-relaxed text-muted-foreground sm:mt-8 sm:text-base">
+            <p className="mt-3 max-w-sm text-pretty text-xs leading-relaxed text-muted-foreground sm:mt-4 sm:text-sm lg:text-base">
               There is no discreet, premium, ritual-based product men are proud to use.
               <span className="text-foreground"> Until now.</span>
             </p>
           </Reveal>
         </div>
-        <div className="grid gap-3 sm:gap-4">
+        <div className="grid gap-2 sm:gap-3">
           <MiniCard icon={IconBattery} title="Fatigue & Burnout" index={2}>
             Constant pressure at work, the gym, and home leaves men running on empty,
             with no discreet way to recharge.
@@ -445,33 +445,33 @@ function SolutionSlide() {
           <Eyebrow>The Solution</Eyebrow>
         </Reveal>
         <Reveal index={1}>
-          <SlideTitle className="mt-6">The GirthRx Ritual</SlideTitle>
+          <SlideTitle className="mt-3 sm:mt-4">The GirthRx Ritual</SlideTitle>
         </Reveal>
         <Reveal index={2}>
-          <p className="mt-5 text-lg text-muted-foreground">
+          <p className="mt-2 text-xs leading-relaxed text-muted-foreground sm:mt-3 sm:text-sm lg:text-base">
             Not a pill. A premium honey-based vitality ritual: natural energy, stamina,
             endurance, and confidence in one discreet sachet.
           </p>
         </Reveal>
       </div>
 
-      <div className="mt-8 grid gap-3 sm:grid-cols-2 sm:mt-10 sm:gap-4 md:grid-cols-4">
+      <div className="mt-4 grid gap-2 grid-cols-2 sm:mt-6 sm:gap-3 md:grid-cols-4">
         {steps.map((s, i) => (
           <Reveal
             key={s.label}
             index={i + 2}
-            className={cn(cardBase, cardGlint, 'p-6')}
+            className={cn(cardBase, cardGlint, 'p-3 sm:p-4 lg:p-5')}
           >
-            <div className="mb-4 flex items-center justify-between">
+            <div className="mb-2 flex items-center justify-between sm:mb-3">
               <IconBox icon={s.icon} />
-              <span className="font-heading text-3xl font-bold text-white/8">
+              <span className="font-heading text-2xl font-bold text-white/8 sm:text-3xl">
                 0{i + 1}
               </span>
             </div>
-            <h3 className="font-heading text-xl font-semibold uppercase tracking-wide text-foreground">
+            <h3 className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground sm:text-base lg:text-lg">
               {s.label}
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
+            <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{s.copy}</p>
             {i < steps.length - 1 && (
               <ArrowRight className="absolute -right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-honey/40 md:block" />
             )}
@@ -505,26 +505,26 @@ function ProductSlide() {
         <Eyebrow>Product & Formula</Eyebrow>
       </Reveal>
       <Reveal index={1}>
-        <SlideTitle className="mt-6">
+        <SlideTitle className="mt-3 sm:mt-4">
           GRX 01: <span className="honey-text">20g Functional Honey Sachet</span>
         </SlideTitle>
       </Reveal>
 
-      <div className="mt-8 grid items-center gap-8 lg:grid-cols-[1fr_0.9fr] lg:mt-10 lg:gap-10">
-        <div className="grid gap-3 grid-cols-2 sm:gap-4">
+      <div className="mt-4 grid items-center gap-4 sm:mt-6 lg:grid-cols-[1fr_0.85fr] lg:gap-8">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
           {ingredients.map((ing, i) => (
             <Reveal
               key={ing.label}
               index={i + 2}
-              className={cn(cardBase, cardGlint, 'p-5')}
+              className={cn(cardBase, cardGlint, 'p-3 sm:p-4')}
             >
-              <p className="font-heading text-3xl font-bold text-honey">{ing.value}</p>
-              <p className="mt-1 text-sm text-muted-foreground">{ing.label}</p>
+              <p className="font-heading text-xl font-bold text-honey sm:text-2xl lg:text-3xl">{ing.value}</p>
+              <p className="mt-0.5 text-xs text-muted-foreground">{ing.label}</p>
             </Reveal>
           ))}
         </div>
 
-        <Reveal index={3} className="relative mx-auto h-48 w-full max-w-xs sm:h-64 sm:max-w-sm lg:h-80">
+        <Reveal index={3} className="relative mx-auto hidden h-48 w-full max-w-xs sm:block sm:h-56 lg:h-64 lg:max-w-none">
           <div className="absolute inset-[20%] rounded-full bg-honey/20 blur-3xl" />
           <ProductImage
             src="/images/hero-product.png"
@@ -534,10 +534,10 @@ function ProductSlide() {
         </Reveal>
       </div>
 
-      <Reveal index={5} className="mt-6 flex flex-wrap gap-x-4 gap-y-2 sm:mt-8 sm:gap-x-6 sm:gap-y-3">
+      <Reveal index={5} className="mt-3 flex flex-wrap gap-x-3 gap-y-1.5 sm:mt-4 sm:gap-x-4 sm:gap-y-2">
         {benefits.map((b) => (
-          <span key={b} className="inline-flex items-center gap-2 text-sm text-foreground/85">
-            <Check className="h-4 w-4 text-honey" />
+          <span key={b} className="inline-flex items-center gap-1.5 text-xs text-foreground/85 sm:text-sm">
+            <Check className="h-3.5 w-3.5 text-honey sm:h-4 sm:w-4" />
             {b}
           </span>
         ))}
@@ -558,37 +558,37 @@ function UsageSlide() {
   ]
   return (
     <SlideShell glow="left">
-      <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+      <div className="grid items-center gap-5 sm:gap-8 lg:grid-cols-2 lg:gap-12">
         <div>
           <Reveal index={0}>
             <Eyebrow>Usage & Experience</Eyebrow>
           </Reveal>
           <Reveal index={1}>
-            <SlideTitle className="mt-4 sm:mt-6">A Quiet, Confident Daily Ritual</SlideTitle>
+            <SlideTitle className="mt-3 sm:mt-4">A Quiet, Confident Daily Ritual</SlideTitle>
           </Reveal>
-          <ul className="mt-6 space-y-3 sm:mt-8 sm:space-y-4">
+          <ul className="mt-3 space-y-2 sm:mt-5 sm:space-y-3">
             {points.map((p, i) => (
-              <Reveal as="li" key={p.text} index={i + 2} className="flex gap-3 sm:gap-4">
-                <IconBox icon={p.icon} className="mt-0.5 shrink-0 h-9 w-9 rounded-lg" />
-                <span className="text-sm leading-relaxed text-muted-foreground sm:text-base">
+              <Reveal as="li" key={p.text} index={i + 2} className="flex gap-2.5 sm:gap-3">
+                <IconBox icon={p.icon} className="mt-0.5 shrink-0" />
+                <span className="text-xs leading-relaxed text-muted-foreground sm:text-sm">
                   {p.text}
                 </span>
               </Reveal>
             ))}
           </ul>
           <Reveal index={5}>
-            <p className="mt-6 font-heading text-base font-medium uppercase tracking-wide text-foreground sm:mt-8 sm:text-xl">
+            <p className="mt-3 font-heading text-xs font-medium uppercase tracking-wide text-foreground sm:mt-4 sm:text-sm lg:text-base">
               No pills. No powders to measure.{' '}
               <span className="honey-text">No awkward conversations.</span>
             </p>
           </Reveal>
         </div>
-        <Reveal index={2} className="relative flex items-center justify-center py-4 lg:py-0">
+        <Reveal index={2} className="relative hidden items-center justify-center sm:flex">
           <div className="absolute inset-[15%] rounded-full bg-honey/20 blur-3xl" />
           <ProductImage
             src="/images/single.jpeg"
             alt="GirthRx 20g honey sachet — single serving"
-            className="relative max-h-64 w-auto drop-shadow-2xl sm:max-h-80 lg:max-h-96"
+            className="relative max-h-56 w-auto drop-shadow-2xl lg:max-h-80"
           />
         </Reveal>
       </div>
@@ -624,9 +624,9 @@ function MarketSlide() {
         <Eyebrow>Market Opportunity</Eyebrow>
       </Reveal>
       <Reveal index={1}>
-        <SlideTitle className="mt-6">A Fast-Growing, Underserved Category</SlideTitle>
+        <SlideTitle className="mt-3 sm:mt-4">A Fast-Growing, Underserved Category</SlideTitle>
       </Reveal>
-      <div className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 lg:mt-10">
+      <div className="mt-4 grid grid-cols-3 gap-2 sm:mt-6 sm:gap-3 lg:gap-4">
         {items.map((it, i) => (
           <MiniCard key={it.title} icon={it.icon} title={it.title} index={i + 2}>
             {it.copy}
@@ -634,7 +634,7 @@ function MarketSlide() {
         ))}
       </div>
       <Reveal index={5}>
-        <p className="mt-6 max-w-3xl text-pretty text-base text-foreground/85 sm:mt-8 sm:text-lg">
+        <p className="mt-3 max-w-3xl text-pretty text-xs text-foreground/85 sm:mt-4 sm:text-sm lg:text-base">
           Positioned at the intersection of{' '}
           <span className="text-honey">men&apos;s health</span>,{' '}
           <span className="text-honey">functional foods</span>, and{' '}
@@ -661,40 +661,37 @@ function TractionSlide() {
         <Eyebrow>Traction & Social Proof</Eyebrow>
       </Reveal>
       <Reveal index={1}>
-        <SlideTitle className="mt-6">Real Customers. Real Repeat Purchases.</SlideTitle>
+        <SlideTitle className="mt-3 sm:mt-4">Real Customers. Real Repeat Purchases.</SlideTitle>
       </Reveal>
 
-      <div className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:mt-10">
-        <GlassCard
-          glow
-          className="p-6 sm:p-8"
-        >
+      <div className="mt-4 grid grid-cols-2 gap-2 sm:mt-5 sm:gap-3">
+        <GlassCard glow className="p-4 sm:p-5 lg:p-6">
           <Reveal index={2}>
-            <p className="font-heading text-5xl font-bold text-honey sm:text-6xl">
-              4.8<span className="text-2xl text-honey/70 sm:text-3xl">/5</span>
+            <p className="font-heading text-3xl font-bold text-honey sm:text-4xl lg:text-5xl">
+              4.8<span className="text-lg text-honey/70 sm:text-xl lg:text-2xl">/5</span>
             </p>
-            <p className="mt-2 text-xs uppercase tracking-widest text-foreground/70 sm:text-sm">Average Customer Rating</p>
+            <p className="mt-1 text-[10px] uppercase tracking-widest text-foreground/70 sm:text-xs">Average Customer Rating</p>
           </Reveal>
         </GlassCard>
-        <GlassCard className="p-6 sm:p-8">
+        <GlassCard className="p-4 sm:p-5 lg:p-6">
           <Reveal index={3}>
-            <p className="font-heading text-5xl font-bold text-foreground sm:text-6xl">
-              94<span className="text-2xl text-muted-foreground sm:text-3xl">%</span>
+            <p className="font-heading text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
+              94<span className="text-lg text-muted-foreground sm:text-xl lg:text-2xl">%</span>
             </p>
-            <p className="mt-2 text-xs uppercase tracking-widest text-foreground/70 sm:text-sm">Would Reorder</p>
+            <p className="mt-1 text-[10px] uppercase tracking-widest text-foreground/70 sm:text-xs">Would Reorder</p>
           </Reveal>
         </GlassCard>
       </div>
 
-      <div className="mt-4 grid gap-3 sm:grid-cols-3 sm:mt-6">
+      <div className="mt-2 grid gap-2 sm:mt-3 sm:grid-cols-3 sm:gap-3">
         {channels.map((c, i) => (
           <Reveal
             key={c.text}
             index={i + 4}
-            className={cn(cardBase, cardGlint, 'flex items-start gap-3')}
+            className={cn(cardBase, cardGlint, 'flex items-start gap-2.5 p-3 sm:p-4')}
           >
-            <c.icon className="mt-0.5 h-5 w-5 shrink-0 text-honey" />
-            <span className="text-sm leading-relaxed text-muted-foreground">{c.text}</span>
+            <c.icon className="mt-0.5 h-4 w-4 shrink-0 text-honey sm:h-5 sm:w-5" />
+            <span className="text-xs leading-relaxed text-muted-foreground">{c.text}</span>
           </Reveal>
         ))}
       </div>
@@ -723,41 +720,41 @@ function PricingSlide() {
         <Eyebrow>Business Model & Pricing</Eyebrow>
       </Reveal>
       <Reveal index={1}>
-        <SlideTitle className="mt-6">Simple, High-Margin Bundle Economics</SlideTitle>
+        <SlideTitle className="mt-3 sm:mt-4">Simple, High-Margin Bundle Economics</SlideTitle>
       </Reveal>
 
-      <div className="mt-8 grid gap-3 sm:grid-cols-3 sm:gap-4 lg:mt-10">
+      <div className="mt-4 grid grid-cols-3 gap-2 sm:mt-5 sm:gap-3">
         {tiers.map((t, i) => (
           <Reveal key={t.name} index={i + 2}>
-            <GlassCard glow={t.best} className="relative p-5 sm:p-6">
+            <GlassCard glow={t.best} className="relative p-3 sm:p-4 lg:p-5">
               {t.best && (
-                <span className="absolute -top-3 left-6 rounded-full bg-honey px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary-foreground">
+                <span className="absolute -top-2.5 left-4 rounded-full bg-honey px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-primary-foreground sm:text-[10px]">
                   Best Value
                 </span>
               )}
-              <p className="text-xs uppercase tracking-widest text-muted-foreground sm:text-sm">{t.name}</p>
+              <p className="text-[10px] uppercase tracking-widest text-muted-foreground sm:text-xs">{t.name}</p>
               <p
                 className={cn(
-                  'mt-2 font-heading text-4xl font-bold sm:mt-3 sm:text-5xl',
+                  'mt-1 font-heading text-xl font-bold sm:text-2xl lg:text-3xl',
                   t.best ? 'text-honey' : 'text-foreground',
                 )}
               >
                 {t.price}
               </p>
-              <p className="mt-2 text-xs leading-relaxed text-muted-foreground sm:mt-3 sm:text-sm">{t.note}</p>
+              <p className="mt-1 text-[10px] leading-relaxed text-muted-foreground sm:text-xs">{t.note}</p>
             </GlassCard>
           </Reveal>
         ))}
       </div>
 
-      <Reveal index={5} className={cn(cardBase, cardGlint, 'mt-6 p-5 sm:mt-8 sm:p-6')}>
-        <p className="mb-3 flex items-center gap-2 font-heading text-base font-semibold uppercase tracking-wide text-foreground sm:mb-4 sm:text-lg">
-          <IconCycle className="h-5 w-5 text-honey" /> Repeat-Purchase Engine
+      <Reveal index={5} className={cn(cardBase, cardGlint, 'mt-3 p-3 sm:mt-4 sm:p-4')}>
+        <p className="mb-2 flex items-center gap-2 font-heading text-xs font-semibold uppercase tracking-wide text-foreground sm:text-sm">
+          <IconCycle className="h-4 w-4 text-honey" /> Repeat-Purchase Engine
         </p>
-        <div className="grid gap-2 sm:grid-cols-3 sm:gap-3">
+        <div className="grid gap-2 sm:grid-cols-3">
           {engine.map((e) => (
-            <span key={e} className="flex items-start gap-2 text-sm text-muted-foreground">
-              <Check className="mt-0.5 h-4 w-4 shrink-0 text-honey" />
+            <span key={e} className="flex items-start gap-1.5 text-xs text-muted-foreground">
+              <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-honey" />
               {e}
             </span>
           ))}
@@ -776,7 +773,7 @@ function GoToMarketSlide() {
     { icon: IconSpeaker, label: 'Awareness', copy: 'Social & creator content, TikTok Shop discovery.' },
     { icon: IconBeam, label: 'Trial', copy: 'Single-sachet purchase, low-friction entry.' },
     { icon: IconCycle, label: 'Ritual Adoption', copy: '10-packs & bundles become the daily habit.' },
-    { icon: IconUsers, label: 'Repeat / Subscription', copy: 'Subscription, wholesale, and gym/retail accounts.' },
+    { icon: IconUsers, label: 'Repeat / Sub', copy: 'Subscription, wholesale, and gym/retail accounts.' },
   ]
   const channels = [
     { icon: IconStore, title: 'Direct-to-Consumer', copy: 'GirthRx Shopify "Men\'s Health Shop."' },
@@ -789,36 +786,36 @@ function GoToMarketSlide() {
         <Eyebrow>Go-to-Market & Channels</Eyebrow>
       </Reveal>
       <Reveal index={1}>
-        <SlideTitle className="mt-6">From Awareness to Ritual Adoption</SlideTitle>
+        <SlideTitle className="mt-3 sm:mt-4">From Awareness to Ritual Adoption</SlideTitle>
       </Reveal>
 
-      <div className="mt-8 grid gap-3 grid-cols-2 md:grid-cols-4 lg:mt-10">
+      <div className="mt-4 grid grid-cols-2 gap-2 sm:mt-5 sm:gap-3 md:grid-cols-4">
         {funnel.map((f, i) => (
           <Reveal
             key={f.label}
             index={i + 2}
-            className={cn(cardBase, cardGlint, 'p-4 sm:p-5')}
+            className={cn(cardBase, cardGlint, 'p-3 sm:p-4')}
           >
-            <f.icon className="h-4 w-4 text-honey sm:h-5 sm:w-5" />
-            <p className="mt-2 font-heading text-sm font-semibold uppercase tracking-wide text-foreground sm:mt-3 sm:text-base">
+            <f.icon className="h-4 w-4 text-honey" />
+            <p className="mt-2 font-heading text-xs font-semibold uppercase tracking-wide text-foreground sm:text-sm">
               {f.label}
             </p>
-            <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{f.copy}</p>
+            <p className="mt-1 text-[10px] leading-relaxed text-muted-foreground sm:text-xs">{f.copy}</p>
           </Reveal>
         ))}
       </div>
 
-      <div className="mt-4 grid gap-3 sm:grid-cols-3 sm:mt-6">
+      <div className="mt-2 grid gap-2 sm:mt-3 sm:grid-cols-3 sm:gap-3">
         {channels.map((c, i) => (
           <Reveal
             key={c.title}
             index={i + 5}
-            className={cn(cardBase, cardGlint, 'flex items-start gap-3')}
+            className={cn(cardBase, cardGlint, 'flex items-start gap-2.5 p-3 sm:p-4')}
           >
-            <c.icon className="mt-0.5 h-5 w-5 shrink-0 text-honey" />
+            <c.icon className="mt-0.5 h-4 w-4 shrink-0 text-honey sm:h-5 sm:w-5" />
             <span>
-              <span className="block text-sm font-semibold text-foreground">{c.title}</span>
-              <span className="text-xs leading-relaxed text-muted-foreground">{c.copy}</span>
+              <span className="block text-xs font-semibold text-foreground sm:text-sm">{c.title}</span>
+              <span className="text-[10px] leading-relaxed text-muted-foreground sm:text-xs">{c.copy}</span>
             </span>
           </Reveal>
         ))}
@@ -839,8 +836,8 @@ function CompetitiveSlide() {
     { name: 'Energy Drinks', values: ['mid', 'yes', 'mid', 'no'], highlight: false },
   ]
   const mark = (v: string) => {
-    if (v === 'yes') return <Check className="mx-auto h-5 w-5 text-honey" />
-    if (v === 'no') return <X className="mx-auto h-5 w-5 text-muted-foreground/40" />
+    if (v === 'yes') return <Check className="mx-auto h-4 w-4 text-honey sm:h-5 sm:w-5" />
+    if (v === 'no') return <X className="mx-auto h-4 w-4 text-muted-foreground/40 sm:h-5 sm:w-5" />
     return <span className="text-muted-foreground/60">~</span>
   }
   return (
@@ -849,11 +846,11 @@ function CompetitiveSlide() {
         <Eyebrow>Competitive Landscape</Eyebrow>
       </Reveal>
       <Reveal index={1}>
-        <SlideTitle className="mt-6">The Premium, Discreet Alternative</SlideTitle>
+        <SlideTitle className="mt-3 sm:mt-4">The Premium, Discreet Alternative</SlideTitle>
       </Reveal>
 
-      <Reveal index={2} className="mt-10 overflow-x-auto">
-        <table className="w-full min-w-[560px] border-separate border-spacing-0 text-center">
+      <Reveal index={2} className="mt-4 overflow-x-auto sm:mt-5">
+        <table className="w-full border-separate border-spacing-0 text-center">
           <thead>
             <tr>
               <th className="w-1/3" />
@@ -861,7 +858,7 @@ function CompetitiveSlide() {
                 <th
                   key={c.name}
                   className={cn(
-                    'rounded-t-xl px-4 py-4 font-heading text-sm font-semibold uppercase tracking-wide',
+                    'rounded-t-xl px-2 py-2.5 font-heading text-xs font-semibold uppercase tracking-wide sm:px-4 sm:py-3',
                     c.highlight
                       ? 'bg-honey/15 text-honey ring-1 ring-honey/25 ring-inset'
                       : 'text-muted-foreground',
@@ -875,14 +872,14 @@ function CompetitiveSlide() {
           <tbody>
             {rows.map((r, ri) => (
               <tr key={r}>
-                <td className="border-t border-white/8 px-4 py-4 text-left text-sm font-medium text-foreground">
+                <td className="border-t border-white/8 px-2 py-2.5 text-left text-xs font-medium text-foreground sm:px-4 sm:py-3 sm:text-sm">
                   {r}
                 </td>
                 {cols.map((c) => (
                   <td
                     key={c.name}
                     className={cn(
-                      'border-t border-white/8 px-4 py-4',
+                      'border-t border-white/8 px-2 py-2.5 sm:px-4 sm:py-3',
                       c.highlight && 'bg-honey/8',
                       c.highlight && ri === rows.length - 1 && 'rounded-b-xl',
                     )}
@@ -897,19 +894,19 @@ function CompetitiveSlide() {
       </Reveal>
 
       <Reveal index={3}>
-        <p className="mt-8 max-w-3xl text-pretty text-base text-muted-foreground">
+        <p className="mt-3 max-w-3xl text-pretty text-xs text-muted-foreground sm:mt-4 sm:text-sm lg:text-base">
           GirthRx is the only entrant treating men&apos;s vitality as a premium daily
           ritual, not a clinical fix.
         </p>
       </Reveal>
-      <Reveal index={4} className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+      <Reveal index={4} className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5 sm:mt-3">
         {[
           { icon: IconFlask, t: 'Lab-Tested' },
           { icon: IconShield, t: 'GMP Quality' },
           { icon: IconStar, t: 'American-Made Formula' },
         ].map((b) => (
-          <span key={b.t} className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80">
-            <b.icon className="h-4 w-4 text-honey" />
+          <span key={b.t} className="inline-flex items-center gap-1.5 text-xs font-medium text-foreground/80">
+            <b.icon className="h-3.5 w-3.5 text-honey sm:h-4 sm:w-4" />
             {b.t}
           </span>
         ))}
@@ -935,21 +932,21 @@ function RoadmapSlide() {
         <Eyebrow>Roadmap & Expansion</Eyebrow>
       </Reveal>
       <Reveal index={1}>
-        <SlideTitle className="mt-6">What&apos;s Next for GirthRx</SlideTitle>
+        <SlideTitle className="mt-3 sm:mt-4">What&apos;s Next for GirthRx</SlideTitle>
       </Reveal>
-      <div className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:mt-10">
+      <div className="mt-4 grid gap-2 sm:mt-6 sm:grid-cols-2 sm:gap-3 lg:gap-4">
         {items.map((it, i) => (
           <Reveal
             key={it.title}
             index={i + 2}
-            className={cn(cardBase, cardGlint, 'flex items-start gap-3 p-5 sm:gap-4 sm:p-6')}
+            className={cn(cardBase, cardGlint, 'flex items-start gap-2.5 p-3 sm:gap-3 sm:p-4 lg:p-5')}
           >
             <IconBox icon={it.icon} className="shrink-0" />
             <span>
-              <span className="block font-heading text-lg font-semibold uppercase tracking-wide text-foreground">
+              <span className="block font-heading text-sm font-semibold uppercase tracking-wide text-foreground sm:text-base">
                 {it.title}
               </span>
-              <span className="mt-1 block text-sm leading-relaxed text-muted-foreground">
+              <span className="mt-0.5 block text-xs leading-relaxed text-muted-foreground">
                 {it.copy}
               </span>
             </span>
@@ -982,46 +979,46 @@ function AskSlide() {
         <Eyebrow>The Ask</Eyebrow>
       </Reveal>
       <Reveal index={1}>
-        <SlideTitle className="mt-6">Partner With Us to Scale the Ritual.</SlideTitle>
+        <SlideTitle className="mt-3 sm:mt-4">Partner With Us to Scale the Ritual.</SlideTitle>
       </Reveal>
       <Reveal index={2}>
-        <p className="mt-5 max-w-2xl text-base text-muted-foreground">
+        <p className="mt-2 max-w-2xl text-xs text-muted-foreground sm:mt-3 sm:text-sm lg:text-base">
           Raising growth capital and building partnerships with retail, wholesale, and
           distribution partners across men&apos;s health and lifestyle.
         </p>
       </Reveal>
 
-      <div className="mt-8 grid gap-5 lg:grid-cols-2 lg:mt-10 lg:gap-6">
+      <div className="mt-4 grid gap-3 sm:mt-5 lg:grid-cols-2 lg:gap-5">
         <div>
-          <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-honey">
-            <IconCoin className="h-4 w-4" /> Use of Funds / Partnerships
+          <p className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-honey sm:text-sm">
+            <IconCoin className="h-3.5 w-3.5 sm:h-4 sm:w-4" /> Use of Funds / Partnerships
           </p>
-          <div className="space-y-3">
+          <div className="space-y-2">
             {funds.map((f, i) => (
               <Reveal
                 key={f.title}
                 index={i + 2}
-                className={cn(cardBase, cardGlint, 'flex items-start gap-3 p-4')}
+                className={cn(cardBase, cardGlint, 'flex items-start gap-2.5 p-3 sm:p-4')}
               >
-                <f.icon className="mt-0.5 h-5 w-5 shrink-0 text-honey" />
+                <f.icon className="mt-0.5 h-4 w-4 shrink-0 text-honey sm:h-5 sm:w-5" />
                 <span>
-                  <span className="block text-sm font-semibold text-foreground">{f.title}</span>
-                  <span className="text-xs leading-relaxed text-muted-foreground">{f.copy}</span>
+                  <span className="block text-xs font-semibold text-foreground sm:text-sm">{f.title}</span>
+                  <span className="text-[10px] leading-relaxed text-muted-foreground sm:text-xs">{f.copy}</span>
                 </span>
               </Reveal>
             ))}
           </div>
         </div>
         <div>
-          <p className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-honey">
-            <IconRocket className="h-4 w-4" /> Expected Outcomes
+          <p className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-honey sm:text-sm">
+            <IconRocket className="h-3.5 w-3.5 sm:h-4 sm:w-4" /> Expected Outcomes
           </p>
-          <GlassCard glow className="p-6">
+          <GlassCard glow className="p-3 sm:p-4 lg:p-5">
             <Reveal index={4}>
-              <ul className="space-y-4">
+              <ul className="space-y-2 sm:space-y-2.5">
                 {outcomes.map((o) => (
-                  <li key={o} className="flex items-start gap-3 text-sm text-foreground/85">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-honey" />
+                  <li key={o} className="flex items-start gap-2 text-xs text-foreground/85 sm:text-sm">
+                    <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-honey sm:h-4 sm:w-4" />
                     {o}
                   </li>
                 ))}
@@ -1046,7 +1043,7 @@ function ClosingSlide() {
           <Eyebrow>Pitch Deck</Eyebrow>
         </Reveal>
         <Reveal index={1}>
-          <h2 className="mt-6 font-heading text-4xl font-bold uppercase leading-[0.95] tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl">
+          <h2 className="mt-4 font-heading text-3xl font-bold uppercase leading-[0.95] tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
             Let&apos;s Build the <span className="honey-text">Ritual</span> Together.
           </h2>
         </Reveal>
@@ -1055,14 +1052,14 @@ function ClosingSlide() {
             href="https://girthrx.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 font-heading text-2xl font-semibold uppercase tracking-wide text-honey transition-opacity hover:opacity-80"
+            className="mt-6 inline-flex items-center gap-2 font-heading text-xl font-semibold uppercase tracking-wide text-honey transition-opacity hover:opacity-80 sm:text-2xl"
           >
             girthrx.com
-            <ArrowRight className="h-6 w-6" />
+            <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6" />
           </a>
         </Reveal>
         <Reveal index={3}>
-          <p className="mt-6 text-sm uppercase tracking-[0.2em] text-muted-foreground">
+          <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground sm:text-sm">
             Investor &amp; Partnership Inquiries
           </p>
         </Reveal>
