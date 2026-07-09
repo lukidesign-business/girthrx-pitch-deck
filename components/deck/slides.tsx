@@ -776,62 +776,6 @@ function PricingSlide() {
 /*  09 — Go-to-Market                                                          */
 /* -------------------------------------------------------------------------- */
 
-function GoToMarketSlide() {
-  const funnel = [
-    { icon: IconSpeaker, label: 'Awareness', copy: 'Social & creator content, TikTok Shop discovery.' },
-    { icon: IconCoin, label: 'Trial', copy: 'Single-sachet purchase, low-friction entry.' },
-    { icon: IconCycle, label: 'Ritual Adoption', copy: '10-packs & bundles become the daily habit.' },
-    { icon: IconUsers, label: 'Repeat / Sub', copy: 'Subscription, wholesale, and gym/retail accounts.' },
-  ]
-  const channels = [
-    { icon: IconStore, title: 'Direct-to-Consumer', copy: 'GirthRx Shopify "Men\'s Health Shop."' },
-    { icon: IconPlay, title: 'Social Commerce', copy: 'TikTok Shop, creator & lifestyle partnerships.' },
-    { icon: IconStack, title: 'Wholesale / Bulk', copy: 'Gyms, retailers, and wellness partners.' },
-  ]
-  return (
-    <SlideShell glow="left">
-      <Reveal index={0}>
-        <Eyebrow>Go-to-Market & Channels</Eyebrow>
-      </Reveal>
-      <Reveal index={1}>
-        <SlideTitle className="mt-3 sm:mt-4">From Awareness to Ritual Adoption</SlideTitle>
-      </Reveal>
-
-      <div className="mt-4 grid grid-cols-2 gap-2 sm:mt-5 sm:gap-3 md:grid-cols-4">
-        {funnel.map((f, i) => (
-          <Reveal
-            key={f.label}
-            index={i + 2}
-            className={cn(cardBase, cardGlint, 'p-3 sm:p-4')}
-          >
-            <f.icon className="h-4 w-4 text-honey" />
-            <p className="mt-2 font-heading text-xs font-semibold uppercase tracking-wide text-foreground sm:text-sm">
-              {f.label}
-            </p>
-            <p className="mt-1 text-[10px] leading-relaxed text-muted-foreground sm:text-xs">{f.copy}</p>
-          </Reveal>
-        ))}
-      </div>
-
-      <div className="mt-2 grid gap-2 sm:mt-3 sm:grid-cols-3 sm:gap-3">
-        {channels.map((c, i) => (
-          <Reveal
-            key={c.title}
-            index={i + 5}
-            className={cn(cardBase, cardGlint, 'flex items-start gap-2.5 p-3 sm:p-4')}
-          >
-            <c.icon className="mt-0.5 h-4 w-4 shrink-0 text-honey sm:h-5 sm:w-5" />
-            <span>
-              <span className="block text-xs font-semibold text-foreground sm:text-sm">{c.title}</span>
-              <span className="text-[10px] leading-relaxed text-muted-foreground sm:text-xs">{c.copy}</span>
-            </span>
-          </Reveal>
-        ))}
-      </div>
-    </SlideShell>
-  )
-}
-
 /* -------------------------------------------------------------------------- */
 /*  10 — Competitive Landscape                                                 */
 /* -------------------------------------------------------------------------- */
@@ -1096,7 +1040,6 @@ export const slides: Slide[] = [
   { id: 'market', name: 'Market', Component: MarketSlide },
   { id: 'traction', name: 'Traction', Component: TractionSlide },
   { id: 'pricing', name: 'Business Model', Component: PricingSlide },
-  { id: 'gtm', name: 'Go-to-Market', Component: GoToMarketSlide },
   { id: 'competitive', name: 'Competitive', Component: CompetitiveSlide },
   { id: 'roadmap', name: 'Roadmap', Component: RoadmapSlide },
   { id: 'ask', name: 'The Ask', Component: AskSlide },
