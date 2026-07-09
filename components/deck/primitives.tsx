@@ -67,13 +67,19 @@ export function SlideShell({
   return (
     <section className="relative h-full w-full overflow-hidden">
       <SlideBackground glow={glow} texture={texture} />
+      {/*
+        pt accounts for the fixed header (~72px on mobile, ~88px on sm+).
+        pb accounts for the fixed bottom controls (~72px on mobile, ~88px on sm+).
+        We do NOT use overflow-y-auto here — content must fit within the viewport.
+        Use justify-center so content is vertically centred in the remaining space.
+      */}
       <div
-        data-scroller=""
-        className="no-scrollbar relative z-10 flex h-full w-full items-center overflow-y-auto"
+        className="relative z-10 flex h-full w-full flex-col justify-center"
+        style={{ paddingTop: 'var(--slide-pt, 72px)', paddingBottom: 'var(--slide-pb, 72px)' }}
       >
         <div
           className={cn(
-            'mx-auto w-full max-w-7xl px-6 py-24 sm:px-10 md:px-14 lg:px-16',
+            'mx-auto w-full max-w-7xl px-4 sm:px-8 md:px-12 lg:px-16',
             className,
           )}
         >
@@ -112,8 +118,8 @@ export function Reveal({
 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.28em] text-honey">
-      <span className="h-px w-8 bg-honey/60" />
+    <span className="inline-flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.28em] text-honey sm:text-xs">
+      <span className="h-px w-6 bg-honey/60 sm:w-8" />
       {children}
     </span>
   )
@@ -129,7 +135,7 @@ export function SlideTitle({
   return (
     <h2
       className={cn(
-        'font-heading text-balance text-4xl font-bold uppercase leading-[0.95] tracking-tight text-foreground sm:text-5xl md:text-6xl',
+        'font-heading text-balance text-2xl font-bold uppercase leading-[0.95] tracking-tight text-foreground sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl',
         className,
       )}
     >

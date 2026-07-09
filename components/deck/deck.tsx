@@ -136,7 +136,15 @@ export function Deck() {
   const progress = ((index + 1) / count) * 100
 
   return (
-    <main className="relative h-[100dvh] w-screen overflow-hidden bg-background">
+    <main
+      className="relative h-[100dvh] w-screen overflow-hidden bg-background"
+      style={
+        {
+          '--slide-pt': '68px',
+          '--slide-pb': '68px',
+        } as React.CSSProperties
+      }
+    >
       {/* Header */}
       <header className="pointer-events-none absolute inset-x-0 top-0 z-30 flex items-center justify-between px-6 py-5 sm:px-10">
         <button
