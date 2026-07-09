@@ -73,7 +73,7 @@ export function SlideShell({
       >
         <div
           className={cn(
-            'mx-auto w-full max-w-7xl px-6 py-24 sm:px-10 md:px-14 lg:px-16',
+            'mx-auto w-full max-w-7xl px-4 py-20 sm:px-8 sm:py-24 md:px-14 lg:px-16',
             className,
           )}
         >
@@ -129,7 +129,7 @@ export function SlideTitle({
   return (
     <h2
       className={cn(
-        'font-heading text-balance text-4xl font-bold uppercase leading-[0.95] tracking-tight text-foreground sm:text-5xl md:text-6xl',
+        'font-heading text-balance text-3xl font-bold uppercase leading-[0.95] tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl',
         className,
       )}
     >

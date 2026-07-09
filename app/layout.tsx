@@ -21,6 +21,29 @@ export const metadata: Metadata = {
   description:
     'GirthRx is a premium honey-based vitality ritual for modern men. Investor and partner pitch deck covering product, market, traction, and the ask.',
   generator: 'v0.app',
+  openGraph: {
+    title: 'GirthRx — Premium Performance Honey',
+    description:
+      'GirthRx is a premium honey-based vitality ritual for modern men. Investor and partner pitch deck covering product, market, traction, and the ask.',
+    url: 'https://girthrx.com',
+    siteName: 'GirthRx',
+    images: [
+      {
+        url: '/images/hero.png',
+        width: 1280,
+        height: 640,
+        alt: 'GirthRx Premium Performance Honey — American Made Functional Honey Formula',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'GirthRx — Premium Performance Honey',
+    description:
+      'GirthRx is a premium honey-based vitality ritual for modern men. Investor and partner pitch deck.',
+    images: ['/images/hero.png'],
+  },
 }
 
 export const viewport: Viewport = {
