@@ -399,45 +399,6 @@ function BrandSlide() {
 /*  02 — The Problem                                                           */
 /* -------------------------------------------------------------------------- */
 
-function ProblemSlide() {
-  return (
-    <SlideShell glow="left">
-      <div className="grid gap-5 sm:gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-12">
-        <div>
-          <Reveal index={0}>
-            <Eyebrow>The Problem</Eyebrow>
-          </Reveal>
-          <Reveal index={1}>
-            <SlideTitle className="mt-3 sm:mt-4">
-              Modern men are tired of cringe, clinical{' '}
-              <span className="honey-text">&ldquo;solutions.&rdquo;</span>
-            </SlideTitle>
-          </Reveal>
-          <Reveal index={2}>
-            <p className="mt-3 max-w-sm text-pretty text-xs leading-relaxed text-muted-foreground sm:mt-4 sm:text-sm lg:text-base">
-              There is no discreet, premium, ritual-based product men are proud to use.
-              <span className="text-foreground"> Until now.</span>
-            </p>
-          </Reveal>
-        </div>
-        <div className="grid gap-2 sm:gap-3">
-          <MiniCard icon={IconBattery} title="Fatigue & Burnout" index={2}>
-            Constant pressure at work, the gym, and home leaves men running on empty,
-            with no discreet way to recharge.
-          </MiniCard>
-          <MiniCard icon={IconPulse} title="Performance Anxiety" index={3}>
-            Confidence quietly follows energy, yet few products address both together.
-          </MiniCard>
-          <MiniCard icon={IconEyeOff} title="A Crowded, Cringe Market" index={4}>
-            Synthetic pills and stimulants feel clinical, risky, or downright
-            embarrassing to buy.
-          </MiniCard>
-        </div>
-      </div>
-    </SlideShell>
-  )
-}
-
 /* -------------------------------------------------------------------------- */
 /*  03 — The Solution / Ritual                                                 */
 /* -------------------------------------------------------------------------- */
@@ -1159,11 +1120,22 @@ function RoseIconBox({
 }
 
 /* Small pill used to badge the collaboration slides */
+function GirthRxLogo({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 32 32" fill="none" className={cn("h-4 w-4 sm:h-5 sm:w-5", className)} aria-hidden>
+      <text x="2" y="24" fontSize="20" fontWeight="bold" fill="currentColor" fontFamily="serif">
+        Ⓡ
+      </text>
+      <path d="M18 10L28 24M24 10v14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  )
+}
+
 function CollabTag({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center gap-1.5 rounded-full border border-rose/25 bg-rose/10 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.2em] text-rose sm:text-[10px]">
-      <span className="h-1.5 w-1.5 rounded-full bg-rose" />
-      GirthRx × Jellybean
+    <span className="inline-flex items-center gap-2 rounded-full border border-rose/25 bg-rose/10 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.2em] text-rose sm:text-[10px]">
+      <GirthRxLogo className="text-honey" />
+      Jellybean
     </span>
   )
 }
@@ -1444,9 +1416,9 @@ function BrandFitSlide() {
           <div className="absolute -inset-2 rounded-3xl bg-rose/15 blur-2xl" />
           <div className="relative overflow-hidden rounded-3xl border border-rose/20">
             <ProductImage
-              src="/images/sachet-studio.webp"
-              alt="Premium GirthRx Honey sachet product shot"
-              className="aspect-[3/4] object-contain p-4"
+              src="/images/lamborghini-ceo.webp"
+              alt="Jellybean next to white Lamborghini, embodying CEO authority"
+              className="aspect-[3/4] object-cover"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050608] to-transparent" />
           </div>
@@ -1556,7 +1528,6 @@ export const slides: Slide[] = [
   { id: 'collab-tiktok', name: 'Growth Engine', Component: TikTokEngineSlide },
   { id: 'collab-structure', name: 'Partnership Structure', Component: StructureSlide },
   { id: 'brand', name: 'Brand Story', Component: BrandSlide },
-  { id: 'problem', name: 'The Problem', Component: ProblemSlide },
   { id: 'solution', name: 'The Ritual', Component: SolutionSlide },
   { id: 'product', name: 'Product & Formula', Component: ProductSlide },
   { id: 'usage', name: 'Usage', Component: UsageSlide },
