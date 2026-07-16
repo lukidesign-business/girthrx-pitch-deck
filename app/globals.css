@@ -9,6 +9,8 @@
   --font-heading: var(--font-oswald), ui-sans-serif, system-ui, sans-serif;
   --color-honey: var(--honey);
   --color-honey-light: var(--honey-light);
+  --color-rose: var(--rose);
+  --color-rose-deep: var(--rose-deep);
   --color-charcoal: var(--charcoal);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -54,6 +56,8 @@
   color-scheme: dark;
   --honey: #f59e0b;
   --honey-light: #fbbf24;
+  --rose: #f472b6;
+  --rose-deep: #db2777;
   --charcoal: #111827;
   --background: #050608;
   --foreground: #f9fafb;
@@ -113,6 +117,25 @@
 
   .text-shadow-honey {
     text-shadow: 0 0 40px rgba(245, 158, 11, 0.35);
+  }
+
+  /* Jellybean feminine accent — blends honey-gold warmth into rose */
+  .rose-text {
+    background: linear-gradient(180deg, #fbcfe8 0%, #f472b6 50%, #db2777 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .duo-text {
+    background: linear-gradient(100deg, #fcd34d 0%, #f59e0b 42%, #f472b6 78%, #ec4899 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .rose-glow {
+    box-shadow: 0 0 60px -12px rgba(236, 72, 153, 0.5);
   }
 
   .no-scrollbar::-webkit-scrollbar {

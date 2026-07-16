@@ -6,13 +6,18 @@ import { cn } from '@/lib/utils'
 /* -------------------------------------------------------------------------- */
 
 type Glow = 'left' | 'right' | 'center' | 'none'
+type Accent = 'honey' | 'rose' | 'duo'
 
 export function SlideBackground({
   glow = 'center',
   texture = false,
+  accent = 'honey',
+  overlay = false,
 }: {
   glow?: Glow
   texture?: boolean
+  accent?: Accent
+  overlay?: boolean
 }) {
   const glowPos: Record<Glow, string> = {
     left: 'at 20% 40%',
@@ -21,9 +26,33 @@ export function SlideBackground({
     none: 'at 50% 50%',
   }
 
+  const glowColor: Record<Accent, string> = {
+    honey: 'rgba(245,158,11,0.16)',
+    rose: 'rgba(236,72,153,0.18)',
+    duo: 'rgba(244,114,182,0.16)',
+  }
+
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
       <div className="absolute inset-0 bg-[#050608]" />
+
+      {/* Honey-lips editorial overlay — the sensual brand motif behind collab slides */}
+      {overlay && (
+        <>
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-[0.16]"
+            style={{ backgroundImage: 'url(/images/honey-lips-overlay.webp)' }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                'linear-gradient(90deg, rgba(5,6,8,0.94) 0%, rgba(5,6,8,0.72) 45%, rgba(5,6,8,0.5) 100%)',
+            }}
+          />
+        </>
+      )}
+
       {texture && (
         <div
           className="absolute inset-0 bg-cover bg-center opacity-[0.10] mix-blend-screen"
@@ -34,7 +63,17 @@ export function SlideBackground({
         <div
           className="absolute inset-0"
           style={{
-            background: `radial-gradient(60% 60% ${glowPos[glow]}, rgba(245,158,11,0.16), transparent 70%)`,
+            background: `radial-gradient(60% 60% ${glowPos[glow]}, ${glowColor[accent]}, transparent 70%)`,
+          }}
+        />
+      )}
+      {/* Duo accent: a subtle rose bloom opposite the primary glow */}
+      {accent === 'duo' && (
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'radial-gradient(50% 50% at 88% 82%, rgba(236,72,153,0.14), transparent 70%)',
           }}
         />
       )}
@@ -58,15 +97,19 @@ export function SlideShell({
   className,
   glow = 'center',
   texture = false,
+  accent = 'honey',
+  overlay = false,
 }: {
   children: ReactNode
   className?: string
   glow?: Glow
   texture?: boolean
+  accent?: Accent
+  overlay?: boolean
 }) {
   return (
     <section className="relative h-full w-full overflow-hidden">
-      <SlideBackground glow={glow} texture={texture} />
+      <SlideBackground glow={glow} texture={texture} accent={accent} overlay={overlay} />
       {/*
         pt accounts for the fixed header (~72px on mobile, ~88px on sm+).
         pb accounts for the fixed bottom controls (~72px on mobile, ~88px on sm+).
@@ -116,10 +159,21 @@ export function Reveal({
   )
 }
 
-export function Eyebrow({ children }: { children: ReactNode }) {
+export function Eyebrow({
+  children,
+  tone = 'honey',
+}: {
+  children: ReactNode
+  tone?: 'honey' | 'rose'
+}) {
   return (
-    <span className="inline-flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.28em] text-honey sm:text-xs">
-      <span className="h-px w-6 bg-honey/60 sm:w-8" />
+    <span
+      className={cn(
+        'inline-flex items-center gap-2 text-[10px] font-medium uppercase tracking-[0.28em] sm:text-xs',
+        tone === 'rose' ? 'text-rose' : 'text-honey',
+      )}
+    >
+      <span className={cn('h-px w-6 sm:w-8', tone === 'rose' ? 'bg-rose/60' : 'bg-honey/60')} />
       {children}
     </span>
   )
