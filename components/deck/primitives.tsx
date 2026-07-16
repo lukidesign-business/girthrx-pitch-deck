@@ -36,7 +36,7 @@ export function SlideBackground({
     <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
       <div className="absolute inset-0 bg-[#050608]" />
 
-      {/* Honey-lips editorial overlay — the sensual brand motif behind collab slides */}
+      {/* Honey-lips editorial overlay  -  the sensual brand motif behind collab slides */}
       {overlay && (
         <>
           <div
@@ -113,7 +113,7 @@ export function SlideShell({
       {/*
         pt accounts for the fixed header (~72px on mobile, ~88px on sm+).
         pb accounts for the fixed bottom controls (~72px on mobile, ~88px on sm+).
-        We do NOT use overflow-y-auto here — content must fit within the viewport.
+        We do NOT use overflow-y-auto here  -  content must fit within the viewport.
         Use justify-center so content is vertically centred in the remaining space.
       */}
       <div

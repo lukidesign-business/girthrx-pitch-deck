@@ -331,7 +331,7 @@ function MiniCard({
 }
 
 /* -------------------------------------------------------------------------- */
-/*  01 — Brand Story (first slide)                                            */
+/*  01  -  Brand Story (first slide)                                            */
 /* -------------------------------------------------------------------------- */
 
 function BrandSlide() {
@@ -345,7 +345,7 @@ function BrandSlide() {
           <div className="absolute inset-0 rounded-2xl bg-honey/10 blur-2xl" />
           <ProductImage
             src="/images/product-banner.png"
-            alt="GirthRx Honey product family — box and sachets"
+            alt="GirthRx Honey product family  -  box and sachets"
             className="relative object-cover"
           />
         </Reveal>
@@ -386,7 +386,7 @@ function BrandSlide() {
           <div className="absolute inset-0 rounded-2xl bg-honey/10 blur-2xl" />
           <ProductImage
             src="/images/product-banner.png"
-            alt="GirthRx Honey product family — box and sachets"
+            alt="GirthRx Honey product family  -  box and sachets"
             className="relative object-cover"
           />
         </Reveal>
@@ -396,11 +396,11 @@ function BrandSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  02 — The Problem                                                           */
+/*  02  -  The Problem                                                           */
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */
-/*  03 — The Solution / Ritual                                                 */
+/*  03  -  The Solution / Ritual                                                 */
 /* -------------------------------------------------------------------------- */
 
 function SolutionSlide() {
@@ -455,7 +455,7 @@ function SolutionSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  04 — Product & Formula                                                     */
+/*  04  -  Product & Formula                                                     */
 /* -------------------------------------------------------------------------- */
 
 function ProductSlide() {
@@ -528,7 +528,7 @@ function ProductSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  05 — Usage & Experience                                                    */
+/*  05  -  Usage & Experience                                                    */
 /* -------------------------------------------------------------------------- */
 
 function UsageSlide() {
@@ -543,7 +543,7 @@ function UsageSlide() {
         <div className="absolute inset-[15%] rounded-full bg-honey/20 blur-3xl" />
         <ProductImage
           src="/images/single.jpeg"
-          alt="GirthRx 20g honey sachet — single serving"
+          alt="GirthRx 20g honey sachet  -  single serving"
           className="relative h-32 w-auto drop-shadow-2xl"
         />
       </Reveal>
@@ -576,7 +576,7 @@ function UsageSlide() {
           <div className="absolute inset-[15%] rounded-full bg-honey/20 blur-3xl" />
           <ProductImage
             src="/images/single.jpeg"
-            alt="GirthRx 20g honey sachet — single serving"
+            alt="GirthRx 20g honey sachet  -  single serving"
             className="relative max-h-56 w-auto drop-shadow-2xl lg:max-h-80"
           />
         </Reveal>
@@ -586,7 +586,7 @@ function UsageSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  06 — Market Opportunity                                                    */
+/*  06  -  Market Opportunity                                                    */
 /* -------------------------------------------------------------------------- */
 
 function MarketSlide() {
@@ -643,7 +643,7 @@ function MarketSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  07 — Traction & Social Proof                                               */
+/*  07  -  Traction & Social Proof                                               */
 /* -------------------------------------------------------------------------- */
 
 function TractionSlide() {
@@ -697,7 +697,7 @@ function TractionSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  08 — Business Model & Pricing                                             */
+/*  08  -  Business Model & Pricing                                             */
 /* -------------------------------------------------------------------------- */
 
 function PricingSlide() {
@@ -762,11 +762,11 @@ function PricingSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  09 — Go-to-Market                                                          */
+/*  09  -  Go-to-Market                                                          */
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */
-/*  10 — Competitive Landscape                                                 */
+/*  10  -  Competitive Landscape                                                 */
 /* -------------------------------------------------------------------------- */
 
 function CompetitiveSlide() {
@@ -857,7 +857,7 @@ function CompetitiveSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  11 — Roadmap                                                               */
+/*  11  -  Roadmap                                                               */
 /* -------------------------------------------------------------------------- */
 
 function RoadmapSlide() {
@@ -899,7 +899,7 @@ function RoadmapSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  12 — The Ask                                                               */
+/*  12  -  The Ask                                                               */
 /* -------------------------------------------------------------------------- */
 
 function AskSlide() {
@@ -973,7 +973,7 @@ function AskSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  13 — Closing                                                               */
+/*  13  -  Closing                                                               */
 /* -------------------------------------------------------------------------- */
 
 function ClosingSlide() {
@@ -991,7 +991,7 @@ function ClosingSlide() {
         </Reveal>
         <Reveal index={2}>
           <p className="mx-auto mt-4 max-w-xl text-pretty text-xs leading-relaxed text-muted-foreground sm:text-sm lg:text-base">
-            A premium 40% growth partnership — built for a woman ready to lead the brand as its
+            A premium 40% growth partnership  -  built for a woman ready to lead the brand as its
             public face, voice, and CEO-style front.
           </p>
         </Reveal>
@@ -1017,7 +1017,7 @@ function ClosingSlide() {
 }
 
 /* ========================================================================== */
-/*  GIRTHRX × JELLYBEAN — COLLABORATION BLOCK                                  */
+/*  GIRTHRX × JELLYBEAN  -  COLLABORATION BLOCK                                  */
 /*  Feminine-powerful, rose-accented layer over the honey/black identity.     */
 /* ========================================================================== */
 
@@ -1141,7 +1141,7 @@ function CollabTag({ children }: { children: ReactNode }) {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  C1 — Collaboration Hero (CEO Opportunity)                                  */
+/*  C1  -  Collaboration Hero (CEO Opportunity)                                  */
 /* -------------------------------------------------------------------------- */
 
 function CollabHeroSlide() {
@@ -1167,7 +1167,7 @@ function CollabHeroSlide() {
             <p className="mt-3 max-w-lg text-pretty text-xs leading-relaxed text-muted-foreground sm:text-sm lg:text-base">
               We&apos;re building the next era of GirthRx around one woman with the image,
               audience, and authority to define it. This is a{' '}
-              <span className="text-foreground">40% growth partnership</span> — an invitation to
+              <span className="text-foreground">40% growth partnership</span>  -  an invitation to
               lead the brand&apos;s public voice as its founding female face.
             </p>
           </Reveal>
@@ -1202,7 +1202,7 @@ function CollabHeroSlide() {
                 Boss energy. Brand equity.
               </p>
               <p className="mt-1 text-[10px] text-white/70 sm:text-xs">
-                Luxury, influence, and ownership — the face of a viral performance brand.
+                Luxury, influence, and ownership  -  the face of a viral performance brand.
               </p>
             </div>
           </div>
@@ -1213,13 +1213,13 @@ function CollabHeroSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  C2 — What GirthRx Builds & Provides                                        */
+/*  C2  -  What GirthRx Builds & Provides                                        */
 /* -------------------------------------------------------------------------- */
 
 function ProvideSlide() {
   const items = [
     { icon: IconCamera, title: 'Premium Creative', copy: 'Product visuals, ad creative, and promo content built for you and delivered ready to post.' },
-    { icon: IconStore, title: 'TikTok Shop Setup', copy: 'Full TikTok Shop integration and product listings — handled on our side end to end.' },
+    { icon: IconStore, title: 'TikTok Shop Setup', copy: 'Full TikTok Shop integration and product listings  -  handled on our side end to end.' },
     { icon: IconUsers, title: 'Affiliate Program', copy: 'Creator seeding and TikTok affiliate implementation to scale reach beyond your own audience.' },
     { icon: IconGlobe, title: 'Web & Landing Pages', copy: 'Conversion-focused pages tied to girthrx.com to turn attention into orders.' },
     { icon: IconWand, title: 'Creative Direction', copy: 'Ongoing campaign concepts, launch materials, and brand positioning support.' },
@@ -1237,7 +1237,7 @@ function ProvideSlide() {
       </Reveal>
       <Reveal index={2}>
         <p className="mt-2 max-w-2xl text-xs leading-relaxed text-muted-foreground sm:mt-3 sm:text-sm lg:text-base">
-          This isn&apos;t a request for promotion — it&apos;s a full support system. We create the
+          This isn&apos;t a request for promotion  -  it&apos;s a full support system. We create the
           assets and hand you polished materials, so you can focus on being the face, voice, and
           amplifier of the brand.
         </p>
@@ -1258,14 +1258,14 @@ function ProvideSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  C3 — What We Expect (CEO energy in action)                                 */
+/*  C3  -  What We Expect (CEO energy in action)                                 */
 /* -------------------------------------------------------------------------- */
 
 function ExpectSlide() {
   const points = [
-    { icon: IconCamera, title: 'Weekly Content', copy: 'Regular posts featuring or mentioning the product — in your own natural style.' },
-    { icon: IconLips, title: 'Authentic Voice', copy: 'TikToks in your voice. We don\u2019t over-script your personality — momentum beats rigid rules.' },
-    { icon: IconCalendar, title: 'Event Presence', copy: 'Show up for the moments that matter — appearances that build real brand visibility.' },
+    { icon: IconCamera, title: 'Weekly Content', copy: 'Regular posts featuring or mentioning the product  -  in your own natural style.' },
+    { icon: IconLips, title: 'Authentic Voice', copy: 'TikToks in your voice. We don\u2019t over-script your personality  -  momentum beats rigid rules.' },
+    { icon: IconCalendar, title: 'Event Presence', copy: 'Show up for the moments that matter  -  appearances that build real brand visibility.' },
     { icon: IconCrown, title: 'Brand Leadership', copy: 'Help shape the public identity, culture, and confidence of the brand as its face.' },
   ]
   return (
@@ -1283,12 +1283,12 @@ function ExpectSlide() {
           <Reveal index={2}>
             <p className="mt-3 max-w-sm text-pretty text-xs leading-relaxed text-muted-foreground sm:text-sm lg:text-base">
               Ownership is earned through visibility, content, and presence. This is what leadership
-              looks like in the role — consistent, confident, and yours.
+              looks like in the role  -  consistent, confident, and yours.
             </p>
           </Reveal>
           <Reveal index={3}>
             <p className="mt-3 font-heading text-xs font-medium uppercase tracking-wide text-foreground sm:text-sm lg:text-base">
-              A real partner role — <span className="rose-text">not just a title.</span>
+              A real partner role  -  <span className="rose-text">not just a title.</span>
             </p>
           </Reveal>
         </div>
@@ -1309,7 +1309,7 @@ function ExpectSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  C4 — TikTok Shop + Affiliate Growth Engine                                 */
+/*  C4  -  TikTok Shop + Affiliate Growth Engine                                 */
 /* -------------------------------------------------------------------------- */
 
 function TikTokEngineSlide() {
@@ -1368,15 +1368,15 @@ function TikTokEngineSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  C5 — Her Personal Brand Fit                                                */
+/*  C5  -  Her Personal Brand Fit                                                */
 /* -------------------------------------------------------------------------- */
 
 function BrandFitSlide() {
   const traits = [
-    { icon: IconCrown, title: 'Authority', copy: 'You read as a boss, not a billboard — desirability with real command.' },
+    { icon: IconCrown, title: 'Authority', copy: 'You read as a boss, not a billboard  -  desirability with real command.' },
     { icon: IconHeart, title: 'Magnetism', copy: 'Your audience leans in. That attention is the brand\u2019s most valuable asset.' },
     { icon: IconGlobe, title: 'Ambition', copy: 'Luxury lifestyle and drive that positions the brand exactly where we want it.' },
-    { icon: IconCamera, title: 'Native Talent', copy: 'A natural fit for viral short-form — confident, sexy, and effortlessly premium.' },
+    { icon: IconCamera, title: 'Native Talent', copy: 'A natural fit for viral short-form  -  confident, sexy, and effortlessly premium.' },
   ]
   return (
     <SlideShell glow="left" accent="rose" overlay>
@@ -1393,7 +1393,7 @@ function BrandFitSlide() {
           <Reveal index={2}>
             <p className="mt-3 max-w-lg text-pretty text-xs leading-relaxed text-muted-foreground sm:text-sm lg:text-base">
               This role was mapped to your strengths on purpose. You merge femininity with authority,
-              sex appeal with substance — the exact blend that makes a performance brand feel
+              sex appeal with substance  -  the exact blend that makes a performance brand feel
               aspirational instead of clinical.
             </p>
           </Reveal>
@@ -1429,11 +1429,11 @@ function BrandFitSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  C6 — Visual Brand World                                                    */
+/*  C6  -  Visual Brand World                                                    */
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */
-/*  C7 — Partnership Structure (40%)                                           */
+/*  C7  -  Partnership Structure (40%)                                           */
 /* -------------------------------------------------------------------------- */
 
 function StructureSlide() {
