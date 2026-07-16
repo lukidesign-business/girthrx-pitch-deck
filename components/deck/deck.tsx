@@ -155,8 +155,8 @@ export function Deck() {
           <Wordmark />
         </button>
         <span className="pointer-events-none flex items-center gap-2 text-xs font-medium uppercase tracking-[0.28em] text-muted-foreground">
-          <span className="hidden h-1.5 w-1.5 rounded-full bg-honey sm:inline-block" />
-          Pitch Deck
+          <span className="hidden h-1.5 w-1.5 rounded-full bg-rose sm:inline-block" />
+          GirthRx × Jellybean
         </span>
       </header>
 

@@ -17,9 +17,9 @@ const oswald = Oswald({
 })
 
 export const metadata: Metadata = {
-  title: 'GirthRx — Premium Performance Honey | Investor & Partner Deck',
+  title: 'GirthRx × Jellybean — CEO Collaboration Proposal',
   description:
-    'GirthRx is a premium honey-based vitality ritual for modern men. Investor and partner pitch deck covering product, market, traction, and the ask.',
+    'A premium 40% growth partnership proposal for Jellybean to lead GirthRx as its public-facing female CEO — covering the brand, the opportunity, deliverables, and the TikTok-native growth engine.',
   generator: 'v0.app',
   openGraph: {
     title: 'GirthRx — Premium Performance Honey',

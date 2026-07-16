@@ -331,7 +331,7 @@ function MiniCard({
 }
 
 /* -------------------------------------------------------------------------- */
-/*  01 — Brand Story (first slide)                                            */
+/*  01  -  Brand Story (first slide)                                            */
 /* -------------------------------------------------------------------------- */
 
 function BrandSlide() {
@@ -345,7 +345,7 @@ function BrandSlide() {
           <div className="absolute inset-0 rounded-2xl bg-honey/10 blur-2xl" />
           <ProductImage
             src="/images/product-banner.png"
-            alt="GirthRx Honey product family — box and sachets"
+            alt="GirthRx Honey product family  -  box and sachets"
             className="relative object-cover"
           />
         </Reveal>
@@ -386,7 +386,7 @@ function BrandSlide() {
           <div className="absolute inset-0 rounded-2xl bg-honey/10 blur-2xl" />
           <ProductImage
             src="/images/product-banner.png"
-            alt="GirthRx Honey product family — box and sachets"
+            alt="GirthRx Honey product family  -  box and sachets"
             className="relative object-cover"
           />
         </Reveal>
@@ -396,50 +396,11 @@ function BrandSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  02 — The Problem                                                           */
+/*  02  -  The Problem                                                           */
 /* -------------------------------------------------------------------------- */
 
-function ProblemSlide() {
-  return (
-    <SlideShell glow="left">
-      <div className="grid gap-5 sm:gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-12">
-        <div>
-          <Reveal index={0}>
-            <Eyebrow>The Problem</Eyebrow>
-          </Reveal>
-          <Reveal index={1}>
-            <SlideTitle className="mt-3 sm:mt-4">
-              Modern men are tired of cringe, clinical{' '}
-              <span className="honey-text">&ldquo;solutions.&rdquo;</span>
-            </SlideTitle>
-          </Reveal>
-          <Reveal index={2}>
-            <p className="mt-3 max-w-sm text-pretty text-xs leading-relaxed text-muted-foreground sm:mt-4 sm:text-sm lg:text-base">
-              There is no discreet, premium, ritual-based product men are proud to use.
-              <span className="text-foreground"> Until now.</span>
-            </p>
-          </Reveal>
-        </div>
-        <div className="grid gap-2 sm:gap-3">
-          <MiniCard icon={IconBattery} title="Fatigue & Burnout" index={2}>
-            Constant pressure at work, the gym, and home leaves men running on empty,
-            with no discreet way to recharge.
-          </MiniCard>
-          <MiniCard icon={IconPulse} title="Performance Anxiety" index={3}>
-            Confidence quietly follows energy, yet few products address both together.
-          </MiniCard>
-          <MiniCard icon={IconEyeOff} title="A Crowded, Cringe Market" index={4}>
-            Synthetic pills and stimulants feel clinical, risky, or downright
-            embarrassing to buy.
-          </MiniCard>
-        </div>
-      </div>
-    </SlideShell>
-  )
-}
-
 /* -------------------------------------------------------------------------- */
-/*  03 — The Solution / Ritual                                                 */
+/*  03  -  The Solution / Ritual                                                 */
 /* -------------------------------------------------------------------------- */
 
 function SolutionSlide() {
@@ -494,7 +455,7 @@ function SolutionSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  04 — Product & Formula                                                     */
+/*  04  -  Product & Formula                                                     */
 /* -------------------------------------------------------------------------- */
 
 function ProductSlide() {
@@ -567,7 +528,7 @@ function ProductSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  05 — Usage & Experience                                                    */
+/*  05  -  Usage & Experience                                                    */
 /* -------------------------------------------------------------------------- */
 
 function UsageSlide() {
@@ -582,7 +543,7 @@ function UsageSlide() {
         <div className="absolute inset-[15%] rounded-full bg-honey/20 blur-3xl" />
         <ProductImage
           src="/images/single.jpeg"
-          alt="GirthRx 20g honey sachet — single serving"
+          alt="GirthRx 20g honey sachet  -  single serving"
           className="relative h-32 w-auto drop-shadow-2xl"
         />
       </Reveal>
@@ -615,7 +576,7 @@ function UsageSlide() {
           <div className="absolute inset-[15%] rounded-full bg-honey/20 blur-3xl" />
           <ProductImage
             src="/images/single.jpeg"
-            alt="GirthRx 20g honey sachet — single serving"
+            alt="GirthRx 20g honey sachet  -  single serving"
             className="relative max-h-56 w-auto drop-shadow-2xl lg:max-h-80"
           />
         </Reveal>
@@ -625,7 +586,7 @@ function UsageSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  06 — Market Opportunity                                                    */
+/*  06  -  Market Opportunity                                                    */
 /* -------------------------------------------------------------------------- */
 
 function MarketSlide() {
@@ -682,7 +643,7 @@ function MarketSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  07 — Traction & Social Proof                                               */
+/*  07  -  Traction & Social Proof                                               */
 /* -------------------------------------------------------------------------- */
 
 function TractionSlide() {
@@ -736,7 +697,7 @@ function TractionSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  08 — Business Model & Pricing                                             */
+/*  08  -  Business Model & Pricing                                             */
 /* -------------------------------------------------------------------------- */
 
 function PricingSlide() {
@@ -801,11 +762,11 @@ function PricingSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  09 — Go-to-Market                                                          */
+/*  09  -  Go-to-Market                                                          */
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */
-/*  10 — Competitive Landscape                                                 */
+/*  10  -  Competitive Landscape                                                 */
 /* -------------------------------------------------------------------------- */
 
 function CompetitiveSlide() {
@@ -896,7 +857,7 @@ function CompetitiveSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  11 — Roadmap                                                               */
+/*  11  -  Roadmap                                                               */
 /* -------------------------------------------------------------------------- */
 
 function RoadmapSlide() {
@@ -938,7 +899,7 @@ function RoadmapSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  12 — The Ask                                                               */
+/*  12  -  The Ask                                                               */
 /* -------------------------------------------------------------------------- */
 
 function AskSlide() {
@@ -1012,22 +973,29 @@ function AskSlide() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  13 — Closing                                                               */
+/*  13  -  Closing                                                               */
 /* -------------------------------------------------------------------------- */
 
 function ClosingSlide() {
   return (
-    <SlideShell glow="center" texture>
+    <SlideShell glow="center" accent="duo" overlay>
       <div className="mx-auto max-w-3xl text-center">
-        <Reveal index={0}>
-          <Eyebrow>Pitch Deck</Eyebrow>
+        <Reveal index={0} className="flex justify-center">
+          <CollabTag />
         </Reveal>
         <Reveal index={1}>
-          <h2 className="mt-4 font-heading text-3xl font-bold uppercase leading-[0.95] tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
-            Let&apos;s Build the <span className="honey-text">Ritual</span> Together.
+          <h2 className="mt-5 font-heading text-3xl font-bold uppercase leading-[0.95] tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+            A <span className="honey-text">Boss-Led </span>Era for{' '}
+            <span className="duo-text">GirthRx.</span>
           </h2>
         </Reveal>
         <Reveal index={2}>
+          <p className="mx-auto mt-4 max-w-xl text-pretty text-xs leading-relaxed text-muted-foreground sm:text-sm lg:text-base">
+            A premium 40% growth partnership  -  built for a woman ready to lead the brand as its
+            public face, voice, and CEO-style front.
+          </p>
+        </Reveal>
+        <Reveal index={3}>
           <a
             href="https://girthrx.com"
             target="_blank"
@@ -1038,12 +1006,505 @@ function ClosingSlide() {
             <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6" />
           </a>
         </Reveal>
-        <Reveal index={3}>
+        <Reveal index={4}>
           <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground sm:text-sm">
-            Investor &amp; Partnership Inquiries
+            Collaboration &amp; Partnership Proposal
           </p>
         </Reveal>
       </div>
+    </SlideShell>
+  )
+}
+
+/* ========================================================================== */
+/*  GIRTHRX × JELLYBEAN  -  COLLABORATION BLOCK                                  */
+/*  Feminine-powerful, rose-accented layer over the honey/black identity.     */
+/* ========================================================================== */
+
+/* --- Extra on-brand icons for the collaboration block --------------------- */
+
+function IconCrown({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path d="M3 8l4 4 5-7 5 7 4-4-2 12H5L3 8Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round" />
+      <path d="M5 20h14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+function IconSpark({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path d="M12 2c.6 5 2 6.4 7 7-5 .6-6.4 2-7 7-.6-5-2-6.4-7-7 5-.6 6.4-2 7-7Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      <path d="M19 3.5v3M20.5 5h-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+function IconCamera({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path d="M3 8.5A1.5 1.5 0 0 1 4.5 7H7l1.5-2.5h7L17 7h2.5A1.5 1.5 0 0 1 21 8.5V18a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18V8.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      <circle cx="12" cy="13" r="3.5" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  )
+}
+
+function IconCalendar({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <rect x="3.5" y="5" width="17" height="16" rx="2" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M3.5 9.5h17M8 3v4M16 3v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+function IconHeart({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path d="M12 20s-7-4.6-9.2-9C1.4 8 2.8 4.8 6 4.8c2 0 3.2 1.2 4 2.6.8-1.4 2-2.6 4-2.6 3.2 0 4.6 3.2 3.2 6.2C19 15.4 12 20 12 20Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+    </svg>
+  )
+}
+
+function IconGlobe({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18" stroke="currentColor" strokeWidth="1.3" />
+    </svg>
+  )
+}
+
+function IconWand({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path d="M5 19L16 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M15 4l.8 2.2L18 7l-2.2.8L15 10l-.8-2.2L12 7l2.2-.8L15 4Z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+      <path d="M6 4v2M5 5h2M19 14v2M18 15h2" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+function IconLips({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path d="M3 10c2-2 4-3 5.5-3 1.4 0 2.5.9 3.5 1.8C13 7.9 14.1 7 15.5 7 17 7 19 8 21 10c-1.5 4-5 6-9 6s-7.5-2-9-6Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      <path d="M3 10c3 .8 6 1.2 9 1.2S18 10.8 21 10" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+/* --- Rose-accented card + icon chrome ------------------------------------- */
+
+const roseCardBase =
+  'relative rounded-xl border border-rose/15 bg-gradient-to-br from-rose/[0.07] to-white/[0.015] backdrop-blur-md transition-all duration-300 hover:border-rose/40 hover:from-rose/[0.12] hover:to-white/[0.02]'
+
+function RoseIconBox({
+  icon: Icon,
+  className,
+}: {
+  icon: ComponentType<{ className?: string }>
+  className?: string
+}) {
+  return (
+    <div
+      className={cn(
+        'inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-rose/25 to-honey/10 text-rose ring-1 ring-rose/25 sm:h-10 sm:w-10',
+        className,
+      )}
+    >
+      <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
+    </div>
+  )
+}
+
+/* Small pill used to badge the collaboration slides */
+function GirthRxLogo({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 32 32" fill="none" className={cn("h-4 w-4 sm:h-5 sm:w-5", className)} aria-hidden>
+      <text x="2" y="24" fontSize="20" fontWeight="bold" fill="currentColor" fontFamily="serif">
+        Ⓡ
+      </text>
+      <path d="M18 10L28 24M24 10v14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+function CollabTag({ children }: { children: ReactNode }) {
+  return (
+    <span className="inline-flex items-center gap-2 rounded-full border border-rose/25 bg-rose/10 px-3 py-1.5 text-[9px] font-semibold uppercase tracking-[0.2em] text-rose sm:text-[10px]">
+      <GirthRxLogo className="text-honey" />
+      Jellybean
+    </span>
+  )
+}
+
+/* -------------------------------------------------------------------------- */
+/*  C1  -  Collaboration Hero (CEO Opportunity)                                  */
+/* -------------------------------------------------------------------------- */
+
+function CollabHeroSlide() {
+  const stats = [
+    { value: '40%', label: 'Growth Partnership' },
+    { value: 'CEO', label: 'Public-Facing Role' },
+    { value: '1of1', label: 'The Female Face' },
+  ]
+  return (
+    <SlideShell glow="right" accent="duo" overlay>
+      <div className="grid items-center gap-5 sm:gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
+        <div>
+          <Reveal index={0}>
+            <CollabTag />
+          </Reveal>
+          <Reveal index={1}>
+            <SlideTitle className="mt-3 sm:mt-4">
+              The <span className="rose-text">CEO</span> Collaboration{' '}
+              <span className="duo-text">Opportunity</span>
+            </SlideTitle>
+          </Reveal>
+          <Reveal index={2}>
+            <p className="mt-3 max-w-lg text-pretty text-xs leading-relaxed text-muted-foreground sm:text-sm lg:text-base">
+              We&apos;re building the next era of GirthRx around one woman with the image,
+              audience, and authority to define it. This is a{' '}
+              <span className="text-foreground">40% growth partnership</span>  -  an invitation to
+              lead the brand&apos;s public voice as its founding female face.
+            </p>
+          </Reveal>
+          <Reveal index={3}>
+            <p className="mt-3 font-heading text-sm font-medium uppercase tracking-wide text-rose sm:text-base lg:text-lg">
+              Not a promo deal. A seat at the table.
+            </p>
+          </Reveal>
+          <div className="mt-4 grid grid-cols-3 gap-2 sm:mt-5 sm:gap-3">
+            {stats.map((s, i) => (
+              <Reveal key={s.label} index={i + 4} className={cn(roseCardBase, cardGlint, 'p-3 text-center sm:p-4')}>
+                <p className="font-heading text-xl font-bold rose-text sm:text-2xl lg:text-3xl">{s.value}</p>
+                <p className="mt-0.5 text-[9px] uppercase tracking-widest text-muted-foreground sm:text-[10px]">
+                  {s.label}
+                </p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+
+        <Reveal index={3} className="relative mx-auto w-full max-w-[230px] sm:max-w-[250px] lg:max-w-none">
+          <div className="absolute -inset-3 rounded-3xl bg-rose/15 blur-2xl" />
+          <div className="relative overflow-hidden rounded-3xl border border-rose/20 ring-1 ring-white/5">
+            <ProductImage
+              src="/images/jellybean-hero.webp"
+              alt="Jellybean as the face of GirthRx, beside the branded G-Wagon"
+              className="aspect-[3/4] object-cover lg:aspect-[4/5]"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050608] via-transparent to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
+              <p className="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-white sm:text-sm">
+                Boss energy. Brand equity.
+              </p>
+              <p className="mt-1 text-[10px] text-white/70 sm:text-xs">
+                Luxury, influence, and ownership  -  the face of a viral performance brand.
+              </p>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </SlideShell>
+  )
+}
+
+/* -------------------------------------------------------------------------- */
+/*  C2  -  What GirthRx Builds & Provides                                        */
+/* -------------------------------------------------------------------------- */
+
+function ProvideSlide() {
+  const items = [
+    { icon: IconCamera, title: 'Premium Creative', copy: 'Product visuals, ad creative, and promo content built for you and delivered ready to post.' },
+    { icon: IconStore, title: 'TikTok Shop Setup', copy: 'Full TikTok Shop integration and product listings  -  handled on our side end to end.' },
+    { icon: IconUsers, title: 'Affiliate Program', copy: 'Creator seeding and TikTok affiliate implementation to scale reach beyond your own audience.' },
+    { icon: IconGlobe, title: 'Web & Landing Pages', copy: 'Conversion-focused pages tied to girthrx.com to turn attention into orders.' },
+    { icon: IconWand, title: 'Creative Direction', copy: 'Ongoing campaign concepts, launch materials, and brand positioning support.' },
+    { icon: IconStack, title: 'Backend & Systems', copy: 'Marketing infrastructure, fulfillment, and the operational engine behind the scenes.' },
+  ]
+  return (
+    <SlideShell glow="left" accent="duo">
+      <Reveal index={0}>
+        <Eyebrow tone="rose">What GirthRx Provides</Eyebrow>
+      </Reveal>
+      <Reveal index={1}>
+        <SlideTitle className="mt-3 sm:mt-4">
+          We Bring the <span className="rose-text">Infrastructure.</span> You Bring the Spotlight.
+        </SlideTitle>
+      </Reveal>
+      <Reveal index={2}>
+        <p className="mt-2 max-w-2xl text-xs leading-relaxed text-muted-foreground sm:mt-3 sm:text-sm lg:text-base">
+          This isn&apos;t a request for promotion  -  it&apos;s a full support system. We create the
+          assets and hand you polished materials, so you can focus on being the face, voice, and
+          amplifier of the brand.
+        </p>
+      </Reveal>
+      <div className="mt-4 grid grid-cols-2 gap-2 sm:mt-6 sm:gap-3 lg:grid-cols-3">
+        {items.map((it, i) => (
+          <Reveal key={it.title} index={i + 2} className={cn(roseCardBase, cardGlint, 'p-3 sm:p-4 lg:p-5')}>
+            <RoseIconBox icon={it.icon} className="mb-2 sm:mb-3" />
+            <h3 className="mb-1 font-heading text-sm font-semibold uppercase tracking-wide text-foreground sm:text-base">
+              {it.title}
+            </h3>
+            <p className="text-[11px] leading-relaxed text-muted-foreground sm:text-xs">{it.copy}</p>
+          </Reveal>
+        ))}
+      </div>
+    </SlideShell>
+  )
+}
+
+/* -------------------------------------------------------------------------- */
+/*  C3  -  What We Expect (CEO energy in action)                                 */
+/* -------------------------------------------------------------------------- */
+
+function ExpectSlide() {
+  const points = [
+    { icon: IconCamera, title: 'Weekly Content', copy: 'Regular posts featuring or mentioning the product  -  in your own natural style.' },
+    { icon: IconLips, title: 'Authentic Voice', copy: 'TikToks in your voice. We don\u2019t over-script your personality  -  momentum beats rigid rules.' },
+    { icon: IconCalendar, title: 'Event Presence', copy: 'Show up for the moments that matter  -  appearances that build real brand visibility.' },
+    { icon: IconCrown, title: 'Brand Leadership', copy: 'Help shape the public identity, culture, and confidence of the brand as its face.' },
+  ]
+  return (
+    <SlideShell glow="right" accent="rose">
+      <div className="grid gap-5 sm:gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-12">
+        <div>
+          <Reveal index={0}>
+            <Eyebrow tone="rose">How the 40% is Activated</Eyebrow>
+          </Reveal>
+          <Reveal index={1}>
+            <SlideTitle className="mt-3 sm:mt-4">
+              CEO Energy, <span className="rose-text">In Action.</span>
+            </SlideTitle>
+          </Reveal>
+          <Reveal index={2}>
+            <p className="mt-3 max-w-sm text-pretty text-xs leading-relaxed text-muted-foreground sm:text-sm lg:text-base">
+              Ownership is earned through visibility, content, and presence. This is what leadership
+              looks like in the role  -  consistent, confident, and yours.
+            </p>
+          </Reveal>
+          <Reveal index={3}>
+            <p className="mt-3 font-heading text-xs font-medium uppercase tracking-wide text-foreground sm:text-sm lg:text-base">
+              A real partner role  -  <span className="rose-text">not just a title.</span>
+            </p>
+          </Reveal>
+        </div>
+        <div className="grid gap-2 sm:grid-cols-2 sm:gap-3">
+          {points.map((p, i) => (
+            <Reveal key={p.title} index={i + 2} className={cn(roseCardBase, cardGlint, 'p-3 sm:p-4 lg:p-5')}>
+              <RoseIconBox icon={p.icon} className="mb-2 sm:mb-3" />
+              <h3 className="mb-1 font-heading text-sm font-semibold uppercase tracking-wide text-foreground sm:text-base">
+                {p.title}
+              </h3>
+              <p className="text-[11px] leading-relaxed text-muted-foreground sm:text-xs">{p.copy}</p>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </SlideShell>
+  )
+}
+
+/* -------------------------------------------------------------------------- */
+/*  C4  -  TikTok Shop + Affiliate Growth Engine                                 */
+/* -------------------------------------------------------------------------- */
+
+function TikTokEngineSlide() {
+  const funnel = [
+    { icon: IconSpark, tag: 'Top of Funnel', title: 'Desire', copy: 'You create premium, seductive short-form that makes the brand magnetic.' },
+    { icon: IconUsers, tag: 'Mid Funnel', title: 'Reach', copy: 'Affiliate creators seed the product, multiplying views and social proof.' },
+    { icon: IconStore, tag: 'Bottom of Funnel', title: 'Convert', copy: 'TikTok Shop turns attention into direct, in-app purchases.' },
+  ]
+  return (
+    <SlideShell glow="center" accent="duo">
+      <Reveal index={0}>
+        <Eyebrow tone="rose">Growth Engine</Eyebrow>
+      </Reveal>
+      <Reveal index={1}>
+        <SlideTitle className="mt-3 sm:mt-4">
+          A <span className="duo-text">TikTok-Native</span> Conversion Machine
+        </SlideTitle>
+      </Reveal>
+      <Reveal index={2}>
+        <p className="mt-2 max-w-2xl text-xs leading-relaxed text-muted-foreground sm:mt-3 sm:text-sm lg:text-base">
+          You are the premium face at the top; affiliate creators scale the reach underneath. Every
+          week of content compounds into a direct-to-purchase loop.
+        </p>
+      </Reveal>
+
+      <div className="mt-4 grid grid-cols-1 gap-2 sm:mt-6 sm:grid-cols-3 sm:gap-3">
+        {funnel.map((f, i) => (
+          <Reveal key={f.title} index={i + 2} className={cn(roseCardBase, cardGlint, 'relative p-3 sm:p-4 lg:p-5')}>
+            <div className="mb-2 flex items-center justify-between sm:mb-3">
+              <RoseIconBox icon={f.icon} />
+              <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-rose/70 sm:text-[10px]">
+                {f.tag}
+              </span>
+            </div>
+            <h3 className="font-heading text-base font-semibold uppercase tracking-wide text-foreground sm:text-lg">
+              {f.title}
+            </h3>
+            <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground sm:text-xs">{f.copy}</p>
+            {i < funnel.length - 1 && (
+              <ArrowRight className="absolute -right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-rose/40 sm:block" />
+            )}
+          </Reveal>
+        ))}
+      </div>
+
+      <Reveal index={5} className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 sm:mt-4">
+        {['Influencer Commerce', 'Creator-Led Growth', 'Social Proof Loops', 'Premium DTC Expansion'].map((t) => (
+          <span key={t} className="inline-flex items-center gap-1.5 text-[11px] font-medium text-foreground/80 sm:text-xs">
+            <Check className="h-3.5 w-3.5 text-rose sm:h-4 sm:w-4" />
+            {t}
+          </span>
+        ))}
+      </Reveal>
+    </SlideShell>
+  )
+}
+
+/* -------------------------------------------------------------------------- */
+/*  C5  -  Her Personal Brand Fit                                                */
+/* -------------------------------------------------------------------------- */
+
+function BrandFitSlide() {
+  const traits = [
+    { icon: IconCrown, title: 'Authority', copy: 'You read as a boss, not a billboard  -  desirability with real command.' },
+    { icon: IconHeart, title: 'Magnetism', copy: 'Your audience leans in. That attention is the brand\u2019s most valuable asset.' },
+    { icon: IconGlobe, title: 'Ambition', copy: 'Luxury lifestyle and drive that positions the brand exactly where we want it.' },
+    { icon: IconCamera, title: 'Native Talent', copy: 'A natural fit for viral short-form  -  confident, sexy, and effortlessly premium.' },
+  ]
+  return (
+    <SlideShell glow="left" accent="rose" overlay>
+      <div className="grid items-center gap-5 sm:gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
+        <div>
+          <Reveal index={0}>
+            <Eyebrow tone="rose">Why You</Eyebrow>
+          </Reveal>
+          <Reveal index={1}>
+            <SlideTitle className="mt-3 sm:mt-4">
+              You Don&apos;t Promote Brands. You <span className="rose-text">Define</span> Them.
+            </SlideTitle>
+          </Reveal>
+          <Reveal index={2}>
+            <p className="mt-3 max-w-lg text-pretty text-xs leading-relaxed text-muted-foreground sm:text-sm lg:text-base">
+              This role was mapped to your strengths on purpose. You merge femininity with authority,
+              sex appeal with substance  -  the exact blend that makes a performance brand feel
+              aspirational instead of clinical.
+            </p>
+          </Reveal>
+          <div className="mt-4 grid grid-cols-2 gap-2 sm:mt-5 sm:gap-3">
+            {traits.map((t, i) => (
+              <Reveal key={t.title} index={i + 3} className={cn(roseCardBase, cardGlint, 'p-3 sm:p-4')}>
+                <div className="mb-1.5 flex items-center gap-2">
+                  <RoseIconBox icon={t.icon} className="h-8 w-8 sm:h-9 sm:w-9" />
+                  <h3 className="font-heading text-sm font-semibold uppercase tracking-wide text-foreground sm:text-base">
+                    {t.title}
+                  </h3>
+                </div>
+                <p className="text-[11px] leading-relaxed text-muted-foreground sm:text-xs">{t.copy}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+
+        <Reveal index={2} className="relative mx-auto hidden w-full max-w-xs lg:block lg:max-w-none">
+          <div className="absolute -inset-2 rounded-3xl bg-rose/15 blur-2xl" />
+          <div className="relative overflow-hidden rounded-3xl border border-rose/20">
+            <ProductImage
+              src="/images/lamborghini-ceo.webp"
+              alt="Jellybean next to white Lamborghini, embodying CEO authority"
+              className="aspect-[3/4] object-cover"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050608] to-transparent" />
+          </div>
+        </Reveal>
+      </div>
+    </SlideShell>
+  )
+}
+
+/* -------------------------------------------------------------------------- */
+/*  C6  -  Visual Brand World                                                    */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*  C7  -  Partnership Structure (40%)                                           */
+/* -------------------------------------------------------------------------- */
+
+function StructureSlide() {
+  const ours = [
+    'Product, formula & fulfillment',
+    'Creative, assets & campaigns',
+    'TikTok Shop & affiliate setup',
+    'Web, systems & brand support',
+  ]
+  const hers = [
+    'Presence & premium image',
+    'Weekly content & promotion',
+    'Events & public leadership',
+    'Audience connection & advocacy',
+  ]
+  return (
+    <SlideShell glow="center" accent="duo" overlay>
+      <Reveal index={0}>
+        <Eyebrow tone="rose">Partnership Structure</Eyebrow>
+      </Reveal>
+      <Reveal index={1}>
+        <SlideTitle className="mt-3 sm:mt-4">
+          A Clean <span className="rose-text">40%</span> Growth Partnership
+        </SlideTitle>
+      </Reveal>
+
+      <div className="mt-4 grid gap-2 sm:mt-6 sm:grid-cols-2 sm:gap-3 lg:gap-4">
+        <Reveal index={2}>
+          <GlassCard className="h-full p-4 sm:p-5 lg:p-6">
+            <p className="mb-2 flex items-center gap-2 font-heading text-sm font-semibold uppercase tracking-wide text-honey sm:mb-3 sm:text-base">
+              <IconStack className="h-4 w-4" /> GirthRx Brings
+            </p>
+            <ul className="space-y-2">
+              {ours.map((o) => (
+                <li key={o} className="flex items-start gap-2 text-xs text-foreground/85 sm:text-sm">
+                  <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-honey sm:h-4 sm:w-4" />
+                  {o}
+                </li>
+              ))}
+            </ul>
+          </GlassCard>
+        </Reveal>
+        <Reveal index={3}>
+          <div className={cn(roseCardBase, cardGlint, 'h-full rose-glow p-4 sm:p-5 lg:p-6')}>
+            <p className="mb-2 flex items-center gap-2 font-heading text-sm font-semibold uppercase tracking-wide text-rose sm:mb-3 sm:text-base">
+              <IconCrown className="h-4 w-4" /> Jellybean Brings
+            </p>
+            <ul className="space-y-2">
+              {hers.map((h) => (
+                <li key={h} className="flex items-start gap-2 text-xs text-foreground/85 sm:text-sm">
+                  <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-rose sm:h-4 sm:w-4" />
+                  {h}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
+      </div>
+
+      <Reveal index={4} className={cn(roseCardBase, cardGlint, 'mt-3 flex flex-wrap items-center justify-between gap-3 p-3 sm:mt-4 sm:p-4')}>
+        <p className="font-heading text-xs font-semibold uppercase tracking-wide text-foreground sm:text-sm">
+          Shared goal
+        </p>
+        <div className="flex flex-wrap gap-x-3 gap-y-1.5">
+          {['Growth', 'Authority', 'Scale', 'Revenue', 'Category Leadership'].map((g) => (
+            <span key={g} className="text-[11px] font-medium duo-text sm:text-xs">
+              {g}
+            </span>
+          ))}
+        </div>
+      </Reveal>
     </SlideShell>
   )
 }
@@ -1060,8 +1521,13 @@ export type Slide = {
 
 export const slides: Slide[] = [
   { id: 'closing', name: 'Pitch Deck', Component: ClosingSlide },
+  { id: 'collab-hero', name: 'CEO Opportunity', Component: CollabHeroSlide },
+  { id: 'collab-provide', name: 'What We Provide', Component: ProvideSlide },
+  { id: 'collab-expect', name: 'CEO Energy in Action', Component: ExpectSlide },
+  { id: 'collab-fit', name: 'Why You', Component: BrandFitSlide },
+  { id: 'collab-tiktok', name: 'Growth Engine', Component: TikTokEngineSlide },
+  { id: 'collab-structure', name: 'Partnership Structure', Component: StructureSlide },
   { id: 'brand', name: 'Brand Story', Component: BrandSlide },
-  { id: 'problem', name: 'The Problem', Component: ProblemSlide },
   { id: 'solution', name: 'The Ritual', Component: SolutionSlide },
   { id: 'product', name: 'Product & Formula', Component: ProductSlide },
   { id: 'usage', name: 'Usage', Component: UsageSlide },
