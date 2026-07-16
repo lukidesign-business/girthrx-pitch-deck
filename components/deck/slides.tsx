@@ -1024,7 +1024,7 @@ function ClosingSlide() {
         </Reveal>
         <Reveal index={1}>
           <h2 className="mt-5 font-heading text-3xl font-bold uppercase leading-[0.95] tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
-            A <span className="honey-text">Boss-Led</span> Era for&nbsp;
+            A <span className="honey-text">Boss-Led </span>Era for{' '}
             <span className="duo-text">GirthRx.</span>
           </h2>
         </Reveal>
