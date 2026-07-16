@@ -1017,7 +1017,7 @@ function AskSlide() {
 
 function ClosingSlide() {
   return (
-    <SlideShell glow="center" accent="duo" texture overlay>
+    <SlideShell glow="center" accent="duo" overlay>
       <div className="mx-auto max-w-3xl text-center">
         <Reveal index={0} className="flex justify-center">
           <CollabTag />
@@ -1403,7 +1403,7 @@ function BrandFitSlide() {
   const traits = [
     { icon: IconCrown, title: 'Authority', copy: 'You read as a boss, not a billboard — desirability with real command.' },
     { icon: IconHeart, title: 'Magnetism', copy: 'Your audience leans in. That attention is the brand\u2019s most valuable asset.' },
-    { icon: IconSpark, title: 'Ambition', copy: 'Luxury lifestyle and drive that positions the brand exactly where we want it.' },
+    { icon: IconGlobe, title: 'Ambition', copy: 'Luxury lifestyle and drive that positions the brand exactly where we want it.' },
     { icon: IconCamera, title: 'Native Talent', copy: 'A natural fit for viral short-form — confident, sexy, and effortlessly premium.' },
   ]
   return (
@@ -1444,9 +1444,9 @@ function BrandFitSlide() {
           <div className="absolute -inset-2 rounded-3xl bg-rose/15 blur-2xl" />
           <div className="relative overflow-hidden rounded-3xl border border-rose/20">
             <ProductImage
-              src="/images/jellybean-hero.webp"
-              alt="Jellybean embodying the GirthRx CEO image"
-              className="aspect-[3/4] object-cover"
+              src="/images/sachet-studio.webp"
+              alt="Premium GirthRx Honey sachet product shot"
+              className="aspect-[3/4] object-contain p-4"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050608] to-transparent" />
           </div>
@@ -1459,73 +1459,6 @@ function BrandFitSlide() {
 /* -------------------------------------------------------------------------- */
 /*  C6 — Visual Brand World                                                    */
 /* -------------------------------------------------------------------------- */
-
-function VisualWorldSlide() {
-  const motifs = [
-    'Glossy lips & gold liquid honey',
-    'Black & honey-gold core identity',
-    'Jellybean rose-glow feminine layer',
-    'Luxury nightlife editorial styling',
-    'Wrapped G-Wagon hero imagery',
-    'Cinematic, high-converting ad look',
-  ]
-  return (
-    <SlideShell glow="right" accent="duo">
-      <Reveal index={0}>
-        <Eyebrow tone="rose">Visual Brand World</Eyebrow>
-      </Reveal>
-      <Reveal index={1}>
-        <SlideTitle className="mt-3 sm:mt-4">
-          Two Worlds, <span className="duo-text">One Aesthetic.</span>
-        </SlideTitle>
-      </Reveal>
-
-      <div className="mt-4 grid gap-3 sm:mt-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-8">
-        <div className="grid grid-cols-2 gap-2 sm:gap-3">
-          <Reveal index={2} className="relative col-span-2 overflow-hidden rounded-2xl border border-rose/15">
-            <ProductImage
-              src="/images/sachets-trio.webp"
-              alt="GirthRx Honey sachets — black packaging with gold honey and lips motif"
-              className="aspect-[16/9] object-contain p-3"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050608]/60 to-transparent" />
-          </Reveal>
-          <Reveal index={3} className="overflow-hidden rounded-2xl border border-white/8">
-            <ProductImage
-              src="/images/sachet-solo.webp"
-              alt="Single GirthRx Honey sachet"
-              className="aspect-square object-contain p-3"
-            />
-          </Reveal>
-          <Reveal index={4} className="overflow-hidden rounded-2xl border border-white/8">
-            <ProductImage
-              src="/images/sachets-fan.webp"
-              alt="GirthRx Honey sachets fanned out"
-              className="aspect-square object-cover"
-            />
-          </Reveal>
-        </div>
-
-        <div>
-          <Reveal index={3}>
-            <p className="text-xs leading-relaxed text-muted-foreground sm:text-sm lg:text-base">
-              GirthRx&apos;s masculine performance identity, softened with Jellybean&apos;s rose glow.
-              Premium, seductive, and polished — never cheap.
-            </p>
-          </Reveal>
-          <div className="mt-3 grid gap-1.5 sm:mt-4 sm:gap-2">
-            {motifs.map((m, i) => (
-              <Reveal key={m} index={i + 4} className="flex items-start gap-2 text-[11px] text-foreground/85 sm:text-xs">
-                <IconLips className="mt-0.5 h-3.5 w-3.5 shrink-0 text-rose sm:h-4 sm:w-4" />
-                {m}
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </div>
-    </SlideShell>
-  )
-}
 
 /* -------------------------------------------------------------------------- */
 /*  C7 — Partnership Structure (40%)                                           */
@@ -1617,6 +1550,11 @@ export type Slide = {
 export const slides: Slide[] = [
   { id: 'closing', name: 'Pitch Deck', Component: ClosingSlide },
   { id: 'collab-hero', name: 'CEO Opportunity', Component: CollabHeroSlide },
+  { id: 'collab-provide', name: 'What We Provide', Component: ProvideSlide },
+  { id: 'collab-expect', name: 'CEO Energy in Action', Component: ExpectSlide },
+  { id: 'collab-fit', name: 'Why You', Component: BrandFitSlide },
+  { id: 'collab-tiktok', name: 'Growth Engine', Component: TikTokEngineSlide },
+  { id: 'collab-structure', name: 'Partnership Structure', Component: StructureSlide },
   { id: 'brand', name: 'Brand Story', Component: BrandSlide },
   { id: 'problem', name: 'The Problem', Component: ProblemSlide },
   { id: 'solution', name: 'The Ritual', Component: SolutionSlide },
@@ -1627,11 +1565,5 @@ export const slides: Slide[] = [
   { id: 'pricing', name: 'Business Model', Component: PricingSlide },
   { id: 'competitive', name: 'Competitive', Component: CompetitiveSlide },
   { id: 'roadmap', name: 'Roadmap', Component: RoadmapSlide },
-  { id: 'collab-provide', name: 'What We Provide', Component: ProvideSlide },
-  { id: 'collab-expect', name: 'CEO Energy in Action', Component: ExpectSlide },
-  { id: 'collab-tiktok', name: 'Growth Engine', Component: TikTokEngineSlide },
-  { id: 'collab-fit', name: 'Why You', Component: BrandFitSlide },
-  { id: 'collab-visual', name: 'Visual Brand World', Component: VisualWorldSlide },
-  { id: 'collab-structure', name: 'Partnership Structure', Component: StructureSlide },
   { id: 'ask', name: 'The Ask', Component: AskSlide },
 ]
